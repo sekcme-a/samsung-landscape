@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import Link from 'src/utils/ActiveLink';
 import { NavbarList } from 'src/public/data/navbar';
-import YouTubeIcon from '@mui/icons-material/YouTube';
 
-class NavbarTwo extends Component {
+class Navbar extends Component {
 
     // Navbar 
     _isMounted = false;
@@ -38,16 +37,13 @@ class NavbarTwo extends Component {
 
         return (
             <>
-                <div id="navbar" className="navbar-area navbar-style-two">
+                <div id="navbar" className="navbar-area">
                     <div className="tuam-nav">
-                        <div className="container-fluid">
+                        <div className="container">
                             <nav className="navbar navbar-expand-md navbar-light">
                                 <Link href="/">
                                     <a className="navbar-brand">
-                                        <img src="/logo-white.png" alt="logo" className="white-logo" />
-                                        
-                                        {/* For mobile device */}
-                                        <img src="/logo-black.png" alt="logo" className="logo" />
+                                        <img src="/logo-black.png" alt="logo" />
                                     </a>
                                 </Link>
 
@@ -66,7 +62,8 @@ class NavbarTwo extends Component {
                                 </button>
 
                                 <div className={classOne} id="navbarSupportedContent">
-                                    <ul className="navbar-nav">
+                                   
+ <ul className="navbar-nav">
                                         {NavbarList.map((mainItem, index) => {
                                             if(mainItem.child){
                                                 return(
@@ -123,22 +120,14 @@ class NavbarTwo extends Component {
                                             }
                                         })}
                                     </ul>
-
                                     <div className="others-option">
                                         <div className="call-us">
                                             <div className="icon">
                                                 <i className="flaticon-call"></i>
                                             </div>
-                                            문의하기 :
-                                            <span className="number">010 1234 5678</span>
+                                            Call Us:
+                                            <span className="number">+1 518 285679</span>
                                         </div>
-
-                                        <Link href="#">
-                                            <a className="default-btn" style={{display:"flex", alignItems:"center"}}>
-                                                <YouTubeIcon sx={{mr:"8px"}} />
-                                                동우 24시
-                                            <span></span></a>
-                                        </Link>
                                     </div>
                                 </div>
                             </nav>
@@ -150,4 +139,4 @@ class NavbarTwo extends Component {
     }
 }
 
-export default NavbarTwo;
+export default Navbar;

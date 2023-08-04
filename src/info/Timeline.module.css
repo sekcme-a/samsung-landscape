@@ -1,0 +1,236 @@
+.containerFluid {
+  background: #fff;
+}
+
+.row {
+  padding: 0 0 4em 0;
+}
+
+.rowEven {
+  background: #f1f4f5;
+}
+
+.exampleTitle {
+  text-align: center;
+  margin-bottom: 60px;
+  padding: 3em 0;
+  border-bottom: 1px solid #e4eaec;
+}
+
+.exampleTitle p {
+  margin: 0 auto;
+  font-size: 16px;
+  max-width: 400px;
+}
+
+.timeline {
+  line-height: 1.4em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.timelineItem {
+  padding-left: 40px;
+  position: relative;
+}
+
+.timelineMarker {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 15px;
+}
+
+.timelineMarker:before {
+  background: #ff6b6b;
+  border: 3px solid transparent;
+  border-radius: 100%;
+  content: "";
+  display: block;
+  height: 15px;
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 15px;
+  transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+.timelineMarker:after {
+  content: "";
+  width: 3px;
+  background: #ccd5db;
+  display: block;
+  position: absolute;
+  top: 24px;
+  bottom: 0;
+  left: 6px;
+}
+
+.timelineItem:not(.period):hover .timelineMarker:before {
+  background: transparent;
+  border: 3px solid #ff6b6b;
+}
+
+.timelineInfo {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin: 0 0 0.5em 0;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.timelineContent {
+  padding-bottom: 40px;
+}
+
+.timelineTitle {
+  margin: 0;
+}
+
+.timelineSplit .timeline {
+  display: table;
+}
+
+.timelineSplit .timelineItem {
+  display: table-row;
+  padding: 0;
+}
+
+.timelineSplit .timelineInfo,
+.timelineSplit .timelineMarker,
+.timelineSplit .timelineContent,
+.period.timelineInfo {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.timelineSplit .timelineMarker {
+  position: relative;
+}
+
+.timelineSplit .timelineContent {
+  padding-left: 30px;
+}
+
+.timelineSplit .timelineInfo {
+  padding-right: 30px;
+}
+
+.timelineSplit > .timelineItem:nth-child(odd) .timelineInfo {
+  float: left;
+  text-align: right;
+  padding-right: 30px;
+}
+
+.timelineSplit > .timelineItem:nth-child(odd) .timelineContent {
+  float: right;
+  text-align: left;
+  padding-left: 30px;
+}
+
+.timelineSplit > .timelineItem:nth-child(even) .timelineInfo {
+  float: right;
+  text-align: left;
+  padding-left: 30px;
+}
+
+.timelineSplit > .timelineItem:nth-child(even) .timelineContent {
+  float: left;
+  text-align: right;
+  padding-right: 30px;
+}
+
+.timelineSplit > .timelineItem.period .timelineContent {
+  float: none;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.timelineSplit .timelineItem.period {
+  padding: 50px 0 90px;
+}
+
+.timelineSplit .period .timelineMarker:after {
+  height: 30px;
+  bottom: 0;
+  top: auto;
+}
+
+.timelineSplit .period .timelineTitle {
+  left: auto;
+}
+
+.timelineCentered .timelineSplit,
+.timelineCentered .timelineSplit .timelineItem,
+.timelineCentered .timelineInfo,
+.timelineCentered .timelineMarker,
+.timelineCentered .timelineContent {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.timelineCentered .timelineItem {
+  padding-bottom: 40px;
+  overflow: hidden;
+}
+
+.timelineCentered .timelineMarker {
+  position: absolute;
+  left: 50%;
+  margin-left: -7.5px;
+}
+
+.timelineCentered .timelineInfo,
+.timelineCentered .timelineContent {
+  width: 50%;
+}
+
+.timelineCentered > .timelineItem:nth-child(odd) .timelineInfo {
+  float: left;
+  text-align: right;
+  padding-right: 30px;
+}
+
+.timelineCentered > .timelineItem:nth-child(odd) .timelineContent {
+  float: right;
+  text-align: left;
+  padding-left: 30px;
+}
+
+.timelineCentered > .timelineItem:nth-child(even) .timelineInfo {
+  float: right;
+  text-align: left;
+  padding-left: 30px;
+}
+
+.timelineCentered > .timelineItem:nth-child(even) .timelineContent {
+  float: left;
+  text-align: right;
+  padding-right: 30px;
+}
+
+.timelineCentered > .timelineItem.period .timelineContent {
+  float: none;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.timelineCentered .timelineItem.period {
+  padding: 50px 0 90px;
+}
+
+.markerOutline .timelineMarker:before {
+  background: transparent;
+  border-color: #ff6b6b;
+}
+
+.markerOutline .timelineItem:hover .timelineMarker:before {
+  background: #ff6b6b;
+}

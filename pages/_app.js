@@ -12,6 +12,7 @@ import App from 'next/app';
 import Head from 'next/head';
 import Loader from 'src/public/components/Loader';
 import GoTop from 'src/public/components/GoTop';
+import Footer from 'src/public/components/Footer';
 
 export default class MyApp extends App {
     // Preloader
@@ -46,6 +47,7 @@ export default class MyApp extends App {
 
                 {/* Go Top Button */}
                 <GoTop scrollStepInPx="50" delayInMs="16.66" />
+                <Footer />
             </>
         );
     }

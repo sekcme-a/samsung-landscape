@@ -4,6 +4,9 @@ import Banner from "src/index/components/Banner"
 import AboutUs from "src/index/components/AboutUs"
 import JoinNow from "src/index/components/JoinNow"
 import Service from "src/index/components/Service"
+import ScrollCount from "src/index/components/ScrollCount"
+import Subsidiary from "src/index/components/Subsidiary"
+import Footer from 'src/public/components/Footer';
 // import NavbarTwo from '../components/Layout/NavbarTwo';
 // import Banner from '../components/HomeTwo/Banner';
 // import WeOfferSlider from '../components/Common/WeOfferSlider';
@@ -32,6 +35,12 @@ class Index2 extends Component {
                 <JoinNow />
 
                 <Service />
+
+                <ScrollCount />
+
+                <Subsidiary />
+
+                {/* <Footer /> */}
                 {/* <NavbarTwo />
 
                 <Banner />
