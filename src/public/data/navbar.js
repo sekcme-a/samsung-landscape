@@ -31,7 +31,7 @@ export const NavbarList = [
       },
       {
         text:"조직도",
-        url:"/info/chart"
+        url:"/info/organization"
       },
       {
         text:"오시는 길",

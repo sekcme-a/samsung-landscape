@@ -234,3 +234,19 @@
 .markerOutline .timelineItem:hover .timelineMarker:before {
   background: #ff6b6b;
 }
+
+
+.colXs10{
+  margin-left: 10vw;
+}
+
+@media screen and (max-width: 1048px){
+  .colXs10{
+    margin-left: 3vw;
+  }
+}
+@media screen and (max-width: 600px){
+  .colXs10{
+    margin-left: 0px;
+  }
+}
