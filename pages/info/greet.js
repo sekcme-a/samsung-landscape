@@ -21,7 +21,8 @@ const data = {
 
 감사합니다.`,
   name: "이육행",
-  img: "https://cdn.imweb.me/upload/S202104058bb2801ba27b7/d1d00c82e785b.png"
+  headImg: "https://cdn.imweb.me/thumbnail/20220721/d57f018ea93e2.png",
+  signImg: "https://cdn.imweb.me/upload/S202104058bb2801ba27b7/d1d00c82e785b.png"
 }
 
 
@@ -30,7 +31,6 @@ const Greet = () =>{
 
   return(
     <>
-      <PageNavbar />
 
       <PageHeader main="동우그룹" sub="인사말" link="/info/greet"/>
 

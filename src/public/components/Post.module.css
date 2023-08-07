@@ -1,0 +1,91 @@
+.main_container{
+  padding: 40px 100px;
+}
+
+.content_container{
+  font-weight: normal;
+  white-space:pre-line;
+  margin-top: 50px;
+  margin-bottom: 100px !important;
+}
+
+.navbar_container{
+  margin-top: 80px;
+  margin-bottom: 50px;
+  border-top: 1px solid rgb(222,222,222);
+  border-bottom: 1px solid rgb(222,222,222);
+  display: flex;
+  padding: 15px 10px;
+  justify-content: space-between;
+  width: 100%;
+}
+.navbar_container h6{
+  margin:0;
+  padding: 0;
+  cursor: pointer;
+  transition: .4s;
+}
+.navbar_container h6:hover{
+  color: orange
+}
+
+
+.sub_content_title{
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.border_container{
+  position: relative;
+  width: 100%;
+  margin-top: 6px;
+  margin-bottom: 15px;
+}
+.border_container .top_border{
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 20%;
+  border: 1px solid orange;
+  z-index: 2;
+}
+.border_container .background_border{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border: 1px solid rgb(233,233,233)
+}
+
+.item{
+  
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(222,222,222);
+  padding: 10px 5px;
+  cursor: pointer;
+  transition: .4s;
+}
+.item p{
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  color: inherit;
+}
+.item:hover{
+  color: orange !important;
+}
+
+
+@media screen and (max-width:1189px) {
+  .main_container{
+    padding: 30px 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .main_container{
+    padding: 20px 15px;
+  }
+
+}

@@ -1,6 +1,6 @@
 import PageNavbar from "src/public/components/PageNavbar"
 import PageHeader from "src/public/components/PageHeader"
-import Business from "src/info/Business"
+import ContactContent from "src/contact/ContactContent"
 //https://cdn.imweb.me/thumbnail/20220721/d57f018ea93e2.png
 const Greet = () =>{
 
@@ -8,9 +8,9 @@ const Greet = () =>{
   return(
     <>
 
-      <PageHeader main="동우그룹" sub="경영방침" link="/info/greet"/>
+      <PageHeader main="고객서비스" sub="건의사항" link="/service/recommand"/>
 
-      <Business />
+      <ContactContent type="type2"/>
     </>
   )
 }

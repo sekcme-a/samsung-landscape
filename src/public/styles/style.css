@@ -46,6 +46,15 @@ This files table contents are outlined below>>>>>
 /*================================================
 Default CSS
 =================================================*/
+
+/* Add the initial styles for the animation */
+.animated-element {
+  opacity: 0;
+  transform-origin: center;
+  transition: all var(--duration, 1s) cubic-bezier(0, 0, 0.2, 1) var(--delay, 0s);
+}
+
+
 body {
   color: #524552;
   padding: 0;

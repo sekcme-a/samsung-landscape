@@ -1,0 +1,52 @@
+.main_container{
+  margin: 40px 200px;
+  position: relative;
+}
+
+.main_container h2{
+  font-size: 19px;
+  line-height: 1.4;
+}
+
+.main_container .border{
+  border-bottom:2px solid green;
+  margin: 30px 0;
+}
+.main_container h3{
+  font-size: 18px;
+  text-align: end;
+  right: 0;
+  color: green;
+}
+
+.image_container{
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  position: relative;
+  margin-bottom: 100px;
+}
+.image_container img{
+  width: 50vw;
+}
+
+@media screen and (max-width:1189px) {
+  .main_container{
+    margin: 30px 30px;
+  }
+}
+@media screen and (max-width:900px) {
+  .main_container h3{
+    width: 100% !important;
+  }
+  .image_container img{
+    width: 100%;
+  }
+  
+}
+
+@media screen and (max-width: 600px) {
+  .main_container{
+    margin: 20px 15px;
+  }
+}

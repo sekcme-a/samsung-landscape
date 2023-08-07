@@ -67,23 +67,23 @@ export const NavbarList = [
   },
   {
     text:'동행소식',
-    url:'article/announcement',
+    url:'/article/announcement',
     child:[
       {
         text:"공지사항",
-        url:"artcle/announcement"
+        url:"/article/announcement"
       },
       {
         text:"동행뉴스",
-        url:"article/news"
+        url:"/article/news"
       },
       {
         text:"동우사보",
-        url:"article/gallery"
+        url:"/article/gallery"
       },
       {
         text:"동우24시",
-        url:"https://www.youtube.com/@user-wq1ug3dw6k"
+        url:"/article/24h"
       }
     ]
   },
@@ -93,11 +93,11 @@ export const NavbarList = [
     child:[
       {
         text:"사업문의",
-        url:"service/contact"
+        url:"/service/contact"
       },
       {
         text:"건의사항",
-        url:"service/recommand"
+        url:"/service/recommand"
       }
     ]
   }

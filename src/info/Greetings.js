@@ -8,7 +8,7 @@ const Greetings = ({data}) => {
     <Grid container className={styles.main_container}>
       <Grid item xs={12} sm={4}>
         <div className={styles.image_container}>
-          <img src={data.img} />
+          <img src={data.headImg} />
         </div>
 
       </Grid>
@@ -25,7 +25,7 @@ const Greetings = ({data}) => {
           <h3>안녕하십니까<br /> 주식회사 동우개발 <strong>회장 {data.name} </strong>입니다.</h3>
           <p>{data.content}</p>
           <h4>{`(주)동우개발 회장 이육행 배상`}</h4>
-          <img src="https://cdn.imweb.me/upload/S202104058bb2801ba27b7/d1d00c82e785b.png" />
+          <img src={data.signImg} />
         </div>
 
       </Grid>
