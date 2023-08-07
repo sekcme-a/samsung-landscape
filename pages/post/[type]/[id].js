@@ -64,7 +64,7 @@ const Post = () => {
   const {id, type} = router.query
   return(
     <>
-      <PageHeader main="공지사항" sub={data[type].title} link="/article/announcement"/>
+      <PageHeader main="공지사항" sub={data[type]?.title} link="/article/announcement"/>
 
       <PostCompo data={data[type]} type={type}/>
       
