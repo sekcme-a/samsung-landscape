@@ -269,7 +269,7 @@ const Navbar = () => {
                                         <div className="icon">
                                             <i className="flaticon-call"></i>
                                         </div>
-                                        Call Us:
+                                        문의하기:
                                         <span className="number">{`02) 976-2200`}</span>
                                     </div>
                                 </div>

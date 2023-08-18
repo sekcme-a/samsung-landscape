@@ -130,11 +130,11 @@ class NavbarTwo extends Component {
                                                 <i className="flaticon-call"></i>
                                             </div>
                                             문의하기 :
-                                            <span className="number">010 1234 5678</span>
+                                            <span className="number">{`02) 976-2200`}</span>
                                         </div>
 
                                         <Link href="#">
-                                            <a className="default-btn" style={{display:"flex", alignItems:"center"}}>
+                                            <a className="default-btn">
                                                 <YouTubeIcon sx={{mr:"8px"}} />
                                                 동우 24시
                                             <span></span></a>
