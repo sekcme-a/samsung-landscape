@@ -2,8 +2,12 @@ import React, { Component, useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper";
+import useData from 'context/data';
+
+import EditButton from 'src/admin/EditButton';
 
 const Service = () => {
+    const {data} = useData()
     const [serviceData, setServiceData] = useState([
         {
             imgUrl:"/aboutUs1.jpg",
@@ -37,16 +41,50 @@ const Service = () => {
         },
         
     ])
-    useEffect(()=>{
+    useEffect(()=>{ 
+        if(data.main)
+        setServiceData([
+            {
+                imgUrl:data.main.serviceImgUrl0,
+                title:data.main.serviceTitle0,
+                text:data.main.serviceText0,
+                url:data.main.serviceUrl0,
+            },
+            {
+                imgUrl:data.main.serviceImgUrl1,
+                title:data.main.serviceTitle1,
+                text:data.main.serviceText1,
+                url:data.main.serviceUrl1,
+            },
+            {
+                imgUrl:data.main.serviceImgUrl2,
+                title:data.main.serviceTitle2,
+                text:data.main.serviceText2,
+                url:data.main.serviceUrl2,
+            },
+            {
+                imgUrl:data.main.serviceImgUrl3,
+                title:data.main.serviceTitle3,
+                text:data.main.serviceText3,
+                url:data.main.serviceUrl3,
+            },
+            {
+                imgUrl:data.main.serviceImgUrl4,
+                title:data.main.serviceTitle4,
+                text:data.main.serviceText4,
+                url:data.main.serviceUrl4,
+            },
+        ])
+    },[data?.main])
 
-    },[])
+
         return (
             <>
                 <section className="services-area ptb-100 bg-f8f8f8">
                     <div className="container">
                         <div className="section-title">
                             <h2>사업분야</h2>
-                            <p style={{fontWeight:"normal"}}>동우그룹의 다양한 사업분야를 소개합니다.</p>
+                            <p style={{fontWeight:"normal", position:"relative"}}>{data.main.serviceSubtitle}<EditButton type="main" item="serviceSubtitle" text="부제목" /></p>
                         </div>
 
                         <Swiper
@@ -75,18 +113,22 @@ const Service = () => {
                             {serviceData.map((item, index) => {
                                 return(
                                     <SwiperSlide key={index}>
-                                        <div className="services-box" style={{cursor:"pointer"}}>
-                                            <img src={item.imgUrl} alt={item.title} />
+                                        
+                                        <div className="services-box">
+                                            <img src={item.imgUrl} alt={item.title} style={{position:"relative"}} />
 
-                                            <div className="services-content">
+                                            <div className="services-content" style={{position:"relative"}}>
+                                                <EditButton type="main" item={`serviceUrl${index}`} text="이동할 주소 (https나 http를 포함한 전체주소)" />
                                                 <h3>
-                                                    <Link href={item.url}>
-                                                        <a>{item.title}</a>
+                                                    <Link href={item.url ? item.url : "/" }>
+                                                        <a>{item.title} {console.log(item.url)}</a>
                                                     </Link>
+                                                    <EditButton type="main" item={`serviceTitle${index}`} text="제목" />
                                                 </h3>
-                                                <p style={{fontWeight:"normal"}}>{item.text}</p>
-                                            </div>
+                                                <p style={{fontWeight:"normal", position:"relative"}}>{item.text}<EditButton type="main" item={`serviceText${index}`} text="내용" /></p>
+                                            </div><EditButton type="main" item={`serviceImgUrl${index}`} text="이미지" mode="image" defaultImg="/aboutUs1.jpg"/>
                                         </div>
+                                        
                                     </SwiperSlide>
                                 )
                             })}

@@ -4,8 +4,12 @@ import { Button, Grid } from '@mui/material';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
+import EditButton from 'src/admin/EditButton';
+import useData from 'context/data';
+
 //1024*819 사이즈 추천
 const Card = () => {
+  const {data} = useData()
   const [monitorWidth, setMonitorWidth] = useState(1200);
 
   const handleResize = () => {
@@ -24,10 +28,8 @@ const Card = () => {
 
 
 
-  const onButtonClick = (num) => {
-    // Open Naver in a new tab
-    if(num===1)
-      window.open('https://www.naver.com', '_blank');
+  const onButtonClick = (url) => {
+      window.open(url, '_blank');
   };
 
 
@@ -36,7 +38,7 @@ const Card = () => {
     <section className="services-area ptb-100 bg-f8f8f8">
       <div className="section-title">
         <h2>계열사</h2>
-        <p style={{fontWeight:"normal"}}>동우그룹의 계열사를 소개합니다.</p>
+        <p style={{fontWeight:"normal", position:"relative"}}>{data?.main?.subSidiarySubtitle}<EditButton type="main" item="subSidiarySubtitle" text="부제목" />   </p>
       </div>
     <Grid container justifyContent="center" width="100%" style={{padding: "20px 0 0 0"}} >
       <Grid item xs={12} sm={6} md={4} display="flex" justifyContent={monitorWidth>1190 ? "end" : "center"} style={{padding:"20px 0"}}>
@@ -44,17 +46,17 @@ const Card = () => {
           <div className={styles.card}>
             <div className={styles.image}>
               <img
-                src='/example-logo.png'
+                src={data?.main?.subSidiaryImg1}
                 alt="동우개발 로고"
-              />
+              /><EditButton type="main" item="subSidiaryImg1" text="이미지 삽입" mode="image" defaultImg="/example-logo.png"/>
               {/* <Image width={200} height={200} src="/logo-black.png" alt="동우개발 로고" /> */}
             </div>
             <div className={styles.content}>
-              <h3>동우개발</h3>
-              <p>
-                DIn publishing and graphic design, Lorem ipsum is a placeholder text commonly
+              <h3>{data?.main?.subSidiaryTitle1}<EditButton type="main" item="subSidiaryTitle1" text="제목" /></h3>
+              <p style={{position:"relative"}}>
+                {data?.main?.subSidiaryContent1}<EditButton type="main" item="subSidiaryContent1" text="내용 " />
               </p>
-              <Button onClick={()=>onButtonClick(1)} style={{ color: '#FF5D22' }} >홈페이지로 이동</Button>
+              <Button onClick={()=>onButtonClick(data?.main?.subSidiaryUrl1)} style={{ color: '#FF5D22' , position:"relative" }} >홈페이지로 이동<EditButton type="main" item="subSidiaryUrl1" text="이동할 링크(https나 http가 포함되어야합니다." /></Button>
             </div>
           </div>
         </div>
@@ -64,16 +66,16 @@ const Card = () => {
           <div className={styles.card}>
             <div className={styles.image}>
             <img
-                src='/example-logo.png'
+                src={data?.main?.subSidiaryImg2}
                 alt="혜진종합관리 로고"
-              />
+              /><EditButton type="main" item="subSidiaryImg2" text="이미지 삽입" mode="image" defaultImg="/example-logo.png"/>
             </div>
             <div className={styles.content}>
-              <h3>혜진종합관리</h3>
-              <p>
-                DIn publishing and graphic design, Lorem ipsum is a placeholder text  
+              <h3>{data?.main?.subSidiaryTitle2}<EditButton type="main" item="subSidiaryTitle2" text="제목" /></h3>
+              <p style={{position:"relative"}}>
+                {data?.main?.subSidiaryContent2}<EditButton type="main" item="subSidiaryContent2" text="내용 " />
               </p>
-              <Button onClick={()=>onButtonClick(1)} style={{ color: '#FF5D22' }} >홈페이지로 이동</Button>
+              <Button onClick={()=>onButtonClick(data?.main?.subSidiaryUrl1)} style={{ color: '#FF5D22' , position:"relative" }} >홈페이지로 이동<EditButton type="main" item="subSidiaryUrl2" text="이동할 링크(https나 http가 포함되어야합니다." /></Button>
             </div>
           </div>
         </div>
@@ -83,16 +85,16 @@ const Card = () => {
           <div className={styles.card}>
             <div className={styles.image}>
             <img
-                src='/example-logo.png'
+                src={data?.main?.subSidiaryImg3}
                 alt="삼성조경 로고"
-              />
+              /><EditButton type="main" item="subSidiaryImg3" text="이미지 삽입" mode="image" defaultImg="/example-logo.png"/>
             </div>
             <div className={styles.content}>
-              <h3>삼성조경</h3>
-              <p>
-                DIn publishing and graphic design, Lorem ipsum is a placeholder text commonly used
+              <h3>{data?.main?.subSidiaryTitle3}<EditButton type="main" item="subSidiaryTitle3" text="제목" /></h3>
+              <p style={{position:"relative"}}>
+                {data?.main?.subSidiaryContent3}<EditButton type="main" item="subSidiaryContent3" text="내용 " />
               </p>
-              <Button onClick={()=>onButtonClick(1)} style={{ color: '#FF5D22' }} >홈페이지로 이동</Button>
+              <Button onClick={()=>onButtonClick(data?.main?.subSidiaryUrl1)} style={{ color: '#FF5D22' , position:"relative" }} >홈페이지로 이동<EditButton type="main" item="subSidiaryUrl3" text="이동할 링크(https나 http가 포함되어야합니다." /></Button>
             </div>
           </div>
         </div>

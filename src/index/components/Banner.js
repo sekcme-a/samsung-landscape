@@ -3,17 +3,20 @@ import FsLightbox from 'fslightbox-react';
 import Link from 'next/link';
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Autoplay } from "swiper";
+import useData from 'context/data';
+import EditButton from 'src/admin/EditButton';
 
 SwiperCore.use([Navigation, Autoplay]) // Swiper
 
 const Banner = () => {
     const [toggler, setToggler] = useState(false);
+    const {data} = useData()
     return (
 		<>
             <FsLightbox
                 toggler={ toggler }
                 sources={ [
-                    'https://www.youtube.com/watch?v=H2n_edWXoBQ',
+                    data.main.introUrl,
                 ] }
             />
 
@@ -31,8 +34,8 @@ const Banner = () => {
                                 <div className="d-table-cell">
                                     <div className="container">
                                         <div className="main-banner-content">
-                                            <span className="sub-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit,</span>
-                                            <h1>깨끗하고 투명한 관리, 동우그룹</h1>
+                                            <span className="sub-title" style={{position:"relative"}}>{data.main.subtitle}<EditButton type="main" item="subtitle" text="부제목"/></span>
+                                            <h1 style={{position:"relative"}}>{data.main.title}<EditButton type="main" item="title" text="제목"/></h1>
 
                                             <div className="btn-box">
                                                 <Link href="/info/greet" legacyBehavior>
@@ -45,7 +48,7 @@ const Banner = () => {
                                                     className="optional-btn"
                                                     onClick={ () => setToggler(!toggler) }
                                                 > 
-                                                    <i className="flaticon-play-button"></i> 소개영상
+                                                    <i className="flaticon-play-button"></i> 소개영상 <EditButton type="main" item="introUrl" text="소개영상 URL" />
                                                 </div>
                                             </div>
                                         </div>
@@ -67,6 +70,7 @@ const Banner = () => {
                                         onClick={ () => setToggler(!toggler) }
                                     > 
                                         <i className="flaticon-play-button-1"></i>
+                                        <EditButton type="main" item="introUrl" text="소개영상 URL" />
                                     </div>
                                 
                                     <span>동우그룹 소개</span>
@@ -79,20 +83,21 @@ const Banner = () => {
                                         <li>
                                             <i className="flaticon-location"></i>
                                             <span>회사 위치</span>
-                                            서울 도봉구 시루봉로 234<br />방학동  622-33
+                                            <div style={{whiteSpace:"pre-line"}}>{data.main.location}</div>
+                                            <EditButton type="main" item="location" text="회사 위치" />
                                         </li>
 
                                         <li>
                                             <i className="flaticon-email"></i>
                                             <span>이메일 주소</span>
-                                            <a href="mailto:abc@naver.com">abc@naver.com</a>
+                                            <a href={`mailto:${data.main.email}`}>{data.main.email} <EditButton type="main" item="email" text="이메일" /></a>
                                             {/* <a href="mailto:support@tuam.com">support@tuam.com</a> */}
                                         </li>
 
                                         <li>
                                             <i className="flaticon-calendar"></i>
                                             <span>영업시간</span>
-                                            월 - 금, 8AM ~ 8PM
+                                            {data.main.time}<EditButton type="main" item="time" text="영업시간" />
                                         </li>
                                     </ul>
                                 </div>

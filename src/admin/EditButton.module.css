@@ -1,0 +1,19 @@
+.button{
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:blue;
+  border-radius: 50%;
+  position:absolute;
+  top: 0;
+  right: 0;
+  z-index: 99999999999;
+}
+
+.dialog_container{
+  padding: 20px 40px;
+  background-color: white;
+}
