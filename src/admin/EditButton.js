@@ -14,6 +14,8 @@ import ImageInput from "./inputs/ImageInput";
 import ListInput from "./inputs/ListInput";
 import ArrOfObjInput from "./inputs/ArrOfObjInput";
 import MapInput from "./inputs/MapInput";
+import BuildingList from "./inputs/BuildingList";
+import ArrOfObjHrdInput from "./inputs/ArrOfObjHrdInput";
 
 const EditButton = ({type, item, text, defaultImg,  mode="text"}) => {
   // const {user, userData} = useUserData()
@@ -45,7 +47,9 @@ const EditButton = ({type, item, text, defaultImg,  mode="text"}) => {
             {mode==="image" && <ImageInput {...{type, item, text, defaultImg}} />}
             {mode==="list" && <ListInput {...{type, item, text}} />}
             {mode==="arrOfObj" && <ArrOfObjInput {...{type, item, text}} />}
+            {mode==="arrOfObj_Hrd" && <ArrOfObjHrdInput {...{type, item, text}} />}
             {mode==="map" && <MapInput {...{type, item, text}} />}
+            {mode==="building_list" && <BuildingList {...{type, item, text}} />}
             
           </div>
         </Dialog>

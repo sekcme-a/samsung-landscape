@@ -28,9 +28,7 @@ const Business = () => {
   useEffect(() => {
     if(data?.business?.fetched){
       setFetchedData({
-        logoImg: data.business.logoImg,
-        text: data.business.text,
-        yinuem: data.business.yinuem,
+        ...data.business
       })
     }
   },[data?.business])

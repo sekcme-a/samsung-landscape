@@ -18,7 +18,7 @@ const EditControl = () => {
           <div className={styles.edit_button} onClick={()=>setIsEditMode(!isEditMode)}>
             {isEditMode ? "편집모드 해제" : "편집모드 활성화"}
           </div>
-          <div className={styles.logout_button} onClick={()=>auth.signOut()}>
+          <div className={styles.logout_button} onClick={()=>{auth.signOut();setIsEditMode(false)}}>
             어드민 해제
           </div>
         </div>

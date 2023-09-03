@@ -10,7 +10,7 @@ export default function useData(){
 
 export function DataProvider(props){
   const [isEditMode, setIsEditMode] = useState(false)
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(false)
   const [data, setData] = useState({
     main: {fetched: false,},
     footer: {fetched: false,},
@@ -19,6 +19,12 @@ export function DataProvider(props){
     history: {fetched: false},
     organization: {fetched: false},
     map: {fetched: false},
+    housing: {fetched: false},
+    building: {fetched: false},
+    building: {fetched: false},
+    estate: {fetched: false},
+    hrd: {fetched: false},
+    financial: {fetched: false},
   })
   const handleData = (type, data) => {
     setData(prevData => ({
@@ -27,7 +33,7 @@ export function DataProvider(props){
         ...prevData[type],
         ...data
       }
-    }))
+    })) 
   }
 
   useEffect(()=>{
