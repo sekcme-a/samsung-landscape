@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import styles from "./Announcementlist.module.css"
+import styles from "./AnnouncementList.module.css"
 import { useRouter } from "next/router";
 
 import Typography from '@mui/material/Typography';
