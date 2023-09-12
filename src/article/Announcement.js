@@ -21,7 +21,6 @@ const Announcement = ({list}) => {
     }
   };
   const filterData = (list, input) => {
-
     return list.filter(item => {
       return Object.values(item).some(value =>
         String(value).toLowerCase().includes(input.toLowerCase())
@@ -34,7 +33,7 @@ const Announcement = ({list}) => {
     <div className={styles.main_container}>
       <h1>공지사항</h1>
       <div className={styles.search_container}>
-        <p>{list.length===filteredList.length ? `총 ${filteredList.length}개의 공지사항이 있습니다.` : `총 ${filteredList.length}개의 공지사항이 검색되었습니다.`}</p>
+        <p>{list?.length===filteredList?.length ? `총 ${filteredList?.length}개의 공지사항이 있습니다.` : `총 ${filteredList?.length}개의 공지사항이 검색되었습니다.`}</p>
         <TextField
           label="Search"
           variant="outlined"
@@ -48,9 +47,9 @@ const Announcement = ({list}) => {
           className={styles.search_box}
         />
       </div>
-      <AnnouncementList list={filteredList} />
+      <AnnouncementList list={filteredList} countPerPage={10}/>
     </div>
   )
-}
+} 
 
 export default Announcement

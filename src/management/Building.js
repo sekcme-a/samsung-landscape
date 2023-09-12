@@ -84,9 +84,9 @@ const Building = () => {
 
   return(
     <div className={styles.main_container}>
-      <motion.h2 {...initial(0,-50,0)} animate={{...start(0.5,0.2)}} style={{position:"relative"}}>{fetchedData.text1}<EditButton type="building" item="text1" text="텍스트"  /></motion.h2>
+      <motion.h2 {...initial(0,-50,0)} animate={{...start(0.5,0.2)}} style={{position:"relative"}}>{fetchedData.text1}<EditButton type="building" item="text1" text="텍스트" /></motion.h2>
       <motion.div {...initial(0,-50,0)} animate={{...start(0.5,0.4)}} className={styles.border} />
-      <motion.h3 {...initial(0,50,0)} animate={{...start(1,1.0)}}>{fetchedData.text2}<EditButton type="building" item="text2" text="텍스트"  /></motion.h3>
+      <motion.h3 {...initial(0,50,0)} animate={{...start(1,1.0)}}>{fetchedData.text2}<EditButton type="building" item="text2" text="텍스트" /></motion.h3>
       <Grid container spacing={2} rowSpacing={5} className={styles.list_container} ref={inViewRef} style={{position:"relative"}}>
         <EditButton type="building" item="list" text="텍스트" mode="building_list" />
         {fetchedData.list?.map((item, index) => (

@@ -14,16 +14,7 @@ export const NavbarList = [
       {
         text:"경영방침",
         url:"/info/business",
-        // child:[
-        //   {
-        //     text: "실험",
-        //     url:"/test"
-        //   },
-        //   {
-        //     text: "실험2",
-        //     url:"/test"
-        //   }
-        // ]
+
       },
       {
         text: "그룹연혁",

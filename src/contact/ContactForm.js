@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
+import { firestore as db } from 'firebase/firebase'
 const MySwal = withReactContent(Swal)
 
 const alertContent = () => {
@@ -35,10 +36,22 @@ const ContactForm = ({type}) => {
 
     const handleSubmit = async e => {
         e.preventDefault();
-      if(type==="type2")
+      if(type==="type2"){
+        await db.collection("team_admin").doc("dongwoomain").collection("recommand").doc().set({
+            ...contact,
+            createdAt: new Date(),
+            unread: true
+        })
         alert("건의해주셔서 감사합니다. 빠른 시일내에 답변드리겠습니다.")
-      else
+      }
+      else{
+        await db.collection("team_admin").doc("dongwoomain").collection("contact").doc().set({
+            ...contact,
+            createdAt: new Date(),
+            unread: true
+        })
         alert("문의를 보내주셔서 감사합니다. 빠른 시일내에 답변드리겠습니다.")
+      }
     };
 
     return (

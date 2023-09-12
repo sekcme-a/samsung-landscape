@@ -1,7 +1,30 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import ContactForm from './ContactForm';
+import EditButton from 'src/admin/EditButton';
+import useData from 'context/data';
 
 const ContactContent = ({type}) => {
+    const {data, fetch_data} = useData()
+    const [fetchedData, setFetchedData] = useState({
+        address: "서울특별시 도봉구 시루봉로 234, 동우빌딩 2층",
+        email: "dongwoodh@hanmail.net",
+        contact: "02) 976-2200"
+      })
+
+
+    useEffect(()=>{
+        if(!data.contact.fetched) fetch_data("contact")
+      },[])
+    
+      useEffect(() => {
+        if(data?.contact?.fetched){
+          setFetchedData({
+            ...data.contact
+          })
+        }
+      },[data?.contact])
+
+
     return (
         <>
             <section className="contact-area ptb-100">
@@ -17,31 +40,30 @@ const ContactContent = ({type}) => {
 
                             <div className="contact-info">
                                 <ul className="contact-list">
-                                <li>
-                                            <div className="icon">
-                                                <i className="flaticon-location"></i>
-                                            </div>
-                                            <span>주소</span>
-                                            서울특별시 도봉구 시루봉로 234, 동우빌딩 2층
-                                        </li>
+                                    <li style={{whiteSpace:"pre-line"}}>
+                                        <div className="icon">
+                                            <i className="flaticon-location"></i>
+                                        </div>
+                                        <span>주소</span>
+                                        {fetchedData.address}<EditButton type="contact" item="address" text="주소" />
+                                    </li>
 
-                                        <li>
-                                            <div className="icon">
-                                                <i className="flaticon-email"></i>
-                                            </div>
-                                            <span>이메일</span>
-                                            dongwoodh@hanmail.net <br />
-                                            {/* fax@email.com */}
-                                        </li>
+                                    <li style={{whiteSpace:"pre-line"}}>
+                                        <div className="icon">
+                                            <i className="flaticon-email"></i>
+                                        </div>
+                                        <span>이메일</span>
+                                        {fetchedData.email}<EditButton type="contact" item="email" text="이메일" />
+                                        {/* fax@email.com */}
+                                    </li>
 
-                                        <li>
-                                            <div className="icon">
-                                                <i className="fas fa-phone-volume"></i>
-                                            </div>
-                                            <span>연락처</span>
-                                            {`02) 976-2200`} <br />
-                                            {`Fax: 02) 903-1297`}
-                                        </li>
+                                    <li style={{whiteSpace:"pre-line"}}>
+                                        <div className="icon">
+                                            <i className="fas fa-phone-volume"></i>
+                                        </div>
+                                        <span>연락처</span>
+                                        {fetchedData.contact}<EditButton type="contact" item="contact" text="연락처" />
+                                    </li>
                                 </ul>
 
                                 {/* <ul className="social">

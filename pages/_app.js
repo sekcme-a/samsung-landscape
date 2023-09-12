@@ -2,6 +2,7 @@ import 'src/public/styles/bootstrap.min.css';
 import 'src/public/styles/fontawesome.min.css';
 import 'src/public/styles/animate.min.css';
 import 'src/public/styles/flaticon.css';
+import 'src/public/styles/quill.css';
 import "swiper/css";
 import "swiper/css/bundle";
 // Global Style

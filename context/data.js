@@ -25,6 +25,7 @@ export function DataProvider(props){
     estate: {fetched: false},
     hrd: {fetched: false},
     financial: {fetched: false},
+    contact: {fetched: false}
   })
   const handleData = (type, data) => {
     setData(prevData => ({
@@ -36,9 +37,26 @@ export function DataProvider(props){
     })) 
   }
 
-  useEffect(()=>{
+  const [thumbnailsList, setThumbnailsList] = useState({})
+  const fetch_thumbnails_list = async (type) => {
+    const query = await db.collection("team").doc("dongwoomain").collection("posts").where("condition", "==", "게제중").where("type","==",type).orderBy("publishedAt", "desc").get()
+    const list = query.docs.map(doc=>({...doc.data(), id: doc.id}))
+    setThumbnailsList(prevList => ({...prevList, [type]: list}))
+  }
 
-  },[])
+
+  const[postsList, setPostsList] = useState({})
+  const fetch_post = async (postId) => {
+    const doc = await db.collection("team").doc("dongwoomain").collection("posts").doc(postId).get()
+    if (doc.exists) {
+      console.log(doc.data())
+      setPostsList(prevList => ({
+        ...prevList,
+        [postId] : doc.data()
+      }))
+      return true
+    } else return false //해당 id를 가진 post없음.
+  }
 
   const fetch_data = async (type) => {
     setIsLoading(true)
@@ -61,7 +79,9 @@ export function DataProvider(props){
     isEditMode, setIsEditMode,
     data, setData, handleData,
     fetch_data,
-    isLoading
+    thumbnailsList, fetch_thumbnails_list,
+    isLoading,
+    postsList, fetch_post,
   }
 
   return <dataContext.Provider value={value} {...props} />

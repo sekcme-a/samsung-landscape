@@ -7,12 +7,16 @@
   border-bottom: 1px solid rgb(200,200,200);
 }
 .header .no{
-  width: 80px;
+  width: 100px;
   text-align: center;
 }
 .header .title{
   text-align: center;
   width: 100%;
+}
+.header .author{
+  width: 130px;
+  text-align: center;
 }
 .header .published_at{
   text-align: center;
@@ -35,7 +39,7 @@
   background-color: rgb(244,244,244);
 }
 .list li .no{
-  width: 80px;
+  width: 100px;
   text-align: center;
   color: #777;
   font-size: 15px;
@@ -53,6 +57,13 @@
   color: #777;
   font-size: 13px;
 }
+.list li .author{
+  text-align: center;
+  width: 130px;
+  color: #777;
+  font-size: 13px;
+}
+
 
 .list_mobile{
   list-style: none;
