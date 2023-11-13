@@ -29,12 +29,16 @@ const Banner = () => {
                     loop={true}
                 >
                     <SwiperSlide>
-                        <div className="main-banner item-bg1">
+                        <div className="main-banner" style={{backgroundImage:`url(${data.main.bannerBg})`}}>
+                            <EditButton
+                                type="main" item="bannerBg" text="배경이미지 삽입" mode="image" defaultImg="/banner1.jpg" 
+                                style={{position:"absolute", top: 150, right: 100}}
+                            />
                             <div className="d-table">
                                 <div className="d-table-cell">
                                     <div className="container">
-                                        <div className="main-banner-content">
-                                            <span className="sub-title" style={{position:"relative"}}>{data.main.subtitle}<EditButton type="main" item="subtitle" text="부제목"/></span>
+                                        <div className="main-banner-content" style={{zIndex: 100}}>
+                                            <span className="sub-title" style={{position:"relative", zIndex:"100"}}>{data.main.subtitle}<EditButton type="main" item="subtitle" text="부제목"/></span>
                                             <h1 style={{position:"relative"}}>{data.main.title}<EditButton type="main" item="title" text="제목"/></h1>
 
                                             <div className="btn-box">

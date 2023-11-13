@@ -17,7 +17,7 @@ import MapInput from "./inputs/MapInput";
 import BuildingList from "./inputs/BuildingList";
 import ArrOfObjHrdInput from "./inputs/ArrOfObjHrdInput";
 
-const EditButton = ({type, item, text, defaultImg,  mode="text"}) => {
+const EditButton = ({type, item, text, defaultImg,  mode="text", style={}}) => {
   // const {user, userData} = useUserData()
   const {isEditMode} = useData()
   const router = useRouter()
@@ -36,7 +36,7 @@ const EditButton = ({type, item, text, defaultImg,  mode="text"}) => {
   if(isEditMode){
     return(
       <>
-        <div className={styles.button} onClick={onClick}><EditIcon style={{fontSize:"20px", color:"white", zIndex:"99999999"}}/></div>
+        <div className={styles.button} onClick={onClick} style={style}><EditIcon style={{fontSize:"20px", color:"white", zIndex:"99999999"}}/></div>
         <Dialog
           onClose={() => setIsOpenDialog(false)}
           open={isOpenDialog}
