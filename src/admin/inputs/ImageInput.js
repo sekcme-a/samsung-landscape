@@ -59,7 +59,7 @@ const BasicInput = ({type, item, text, defaultImg}) => {
   return(
     <div style={{display:"flex", justifyContent:"center", alignItems:"center", minWidth:"400px", flexWrap:'wrap'}}>
       <h5>{text}</h5>
-      <DropperImage imgURL={data.main.aboutUsImg} setImgURL={handleImgUrl} path={`data/${type}/${item}`} setLoading={setIsImageLoading} />
+      <DropperImage imgURL={data[type][item]} setImgURL={handleImgUrl} path={`data/${type}/${item}`} setLoading={setIsImageLoading} />
       {isImageLoading && <CircularProgress />}
       <Button
         variant="contained"
