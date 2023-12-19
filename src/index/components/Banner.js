@@ -37,7 +37,7 @@ const Banner = () => {
                             <div className="d-table">
                                 <div className="d-table-cell">
                                     <div className="container">
-                                        <div classame="main-banner-content" style={{zIndex: 100}}>
+                                        <div className="main-banner-content" style={{zIndex: 100}}>
                                             <span className="sub-title" style={{position:"relative", zIndex:"100"}}>{data.main.subtitle}<EditButton type="main" item="subtitle" text="부제목"/></span>
                                             <h1 style={{position:"relative"}}>{data.main.title}<EditButton type="main" item="title" text="제목"/></h1>
 
@@ -51,6 +51,7 @@ const Banner = () => {
                                                 <div
                                                     className="optional-btn"
                                                     onClick={ () => setToggler(!toggler) }
+                                                    style={{marginLeft:"20px"}}
                                                 > 
                                                     <i className="flaticon-play-button"></i> 소개영상 <EditButton type="main" item="introUrl" text="소개영상 URL" />
                                                 </div>
