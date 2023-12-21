@@ -24,7 +24,7 @@ const MapInput = ({type, item, text}) => {
       return;
     }
     setIsLoading(true)
-    await db.collection("data").doc(type).update(values)
+    await db.collection("samsung").doc(type).update(values)
     handleData(type, values)
     setIsLoading(false)
   }
@@ -37,8 +37,8 @@ const MapInput = ({type, item, text}) => {
       <TextField
         label="위도"
         variant="standard"
-        value={values.locX}
-        onChange={onValuesChange("locX")}
+        value={values?.map_locX}
+        onChange={onValuesChange("map_locX")}
         size="small"
         // onKeyDown={onKeyDown}
         multiline
@@ -47,8 +47,8 @@ const MapInput = ({type, item, text}) => {
       <TextField
         label="경도"
         variant="standard"
-        value={values.locY}
-        onChange={onValuesChange("locY")}
+        value={values?.map_locY}
+        onChange={onValuesChange("map_locY")}
         size="small"
         // onKeyDown={onKeyDown}
         multiline
@@ -60,6 +60,7 @@ const MapInput = ({type, item, text}) => {
         sx={{ml:"20px"}}
         size="small"
         disabled={isLoading}
+        style={{marginTop: "30px"}}
       >
         {isLoading ? "적용 중" : "적용"}  
       </Button>

@@ -3,7 +3,7 @@ import useUserData from "context/userData"
 import useData from "context/data";
 import { useRouter } from "next/router";
 import { firestore as db } from "firebase/firebase";
-import DropperImage from "public/components/DropperImage"
+import DropperImage from "src/public/DropperImage"
 
 import { Button, CircularProgress, TextField } from "@mui/material";
 
@@ -31,7 +31,13 @@ const BasicInput = ({type, item, text, defaultImg}) => {
       ...prevValues,
       [item]: url
     }))
-    await db.collection("data").doc(type).update({
+    if(type==="housing"  || type==="building" || type==="estate" || type==="hrd" || type==="financial")
+      await db.collection("data").doc(type).update({
+        ...values,
+        [item]: defaultImg
+      })
+    else
+    await db.collection("samsung").doc(type).update({
       ...values,
       [item]: url
     })
@@ -44,10 +50,16 @@ const BasicInput = ({type, item, text, defaultImg}) => {
 
   const onDefaultClick = async () => {
     setIsLoading(true)
-    await db.collection("data").doc(type).update({
-      ...values,
-      [item]: defaultImg
-    })
+    if(type==="housing" || type==="building" || type==="estate" || type==="hrd" || type==="financial")
+      await db.collection("data").doc(type).update({
+        ...values,
+        [item]: defaultImg
+      })
+    else
+      await db.collection("samsung").doc(type).update({
+        ...values,
+        [item]: defaultImg
+      })
     handleData(type, {
       ...values,
       [item]: defaultImg
@@ -55,11 +67,17 @@ const BasicInput = ({type, item, text, defaultImg}) => {
     alert("기본값으로 변경되었습니다.")
     setIsLoading(false)
   }
+
   
   return(
     <div style={{display:"flex", justifyContent:"center", alignItems:"center", minWidth:"400px", flexWrap:'wrap'}}>
       <h5>{text}</h5>
-      <DropperImage imgURL={data[type][item]} setImgURL={handleImgUrl} path={`data/${type}/${item}`} setLoading={setIsImageLoading} />
+      <DropperImage imgURL={data[type][item]} setImgURL={handleImgUrl}
+        path={
+          type==="housing" || type==="building" || type==="estate" || type==="hrd" || type==="financial" ? `data/${type}/${item}` :  `samsung/${type}/${item}`
+        }
+        setLoading={setIsImageLoading}
+      />
       {isImageLoading && <CircularProgress />}
       <Button
         variant="contained"

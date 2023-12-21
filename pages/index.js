@@ -1,34 +1,47 @@
 import React, { useEffect } from 'react';
-import Navbar from "src/public/components/Navbar"
-import Banner from "src/index/components/Banner"
-import AboutUs from "src/index/components/AboutUs"
-import JoinNow from "src/index/components/JoinNow"
-import Service from "src/index/components/Service"
-import ScrollCount from "src/index/components/ScrollCount"
-import Subsidiary from "src/index/components/Subsidiary"
+import Navbar from '../src/public/Navbar';
 
+import Banner from '../src/home/Banner';
+import About from "src/home/About"
+import About2 from "src/home/About2"
+import WhyChooseUs from "src/home/WhyChooseUs"
+import OurMission from "src/home/OurMission"
+import Footer from "src/public/Footer"
 
 import useData from 'context/data';
 
-const Index2 = () => {
+
+const Index = () => {
     const {data, fetch_data} = useData()
 
     useEffect(()=>{
         if(!data.main.fetched) fetch_data("main")
     },[])
-
+  
     return (
         <>
-            <Navbar />
+            {/* <Navbar /> */}
+
             <Banner />
-            <AboutUs />
-            <JoinNow />
-            <Service />
-            <ScrollCount />
-            <Subsidiary />
+
+            {/* <ServicesBoxes />    */}
+
+            <About />
+
+            {/* <ServicesSlider /> */}
+
+            {/* <Partner /> */}
+
+            <WhyChooseUs />
+
+
+            <About2 />
+            <OurMission />
+
             
+            {/* <Footer /> */}
         </>
     );
-};
+}
 
-export default Index2;
+export default Index;

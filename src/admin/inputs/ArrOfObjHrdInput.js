@@ -38,7 +38,10 @@ const ArrOfObjHrdInput = ({type, item, text}) => {
       return;
     }
     setIsLoading(true)
-    await db.collection("data").doc(type).update({...data[type], [item] : values})
+    if(type==="hrd")
+      await db.collection("data").doc(type).update({...data[type], [item] : values})
+    else
+      await db.collection("samsung").doc(type).update({...data[type], [item] : values})
     handleData(type, {...data[type], [item] : values})
     setIsLoading(false)
   }

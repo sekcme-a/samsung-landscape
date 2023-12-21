@@ -1,6 +1,6 @@
 import { CircularProgress, Grid } from "@mui/material"
 import Type from "src/article/Type"
-import PageHeader from "src/public/components/PageHeader"
+import PageHeader from "../../src/public/PageHeader"
 import { useRouter } from "next/router"
 import { useState, useEffect } from "react"
 import useData from "context/data"
@@ -10,8 +10,12 @@ const Article = () => {
   const router = useRouter()
   const {type} = router.query
   const [typeText, setTypeText] = useState("")
-  const {thumbnailsList, fetch_thumbnails_list} = useData()
+  const {data, fetch_data,thumbnailsList, fetch_thumbnails_list} = useData()
   const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(()=>{
+      if(!data.article.fetched) fetch_data("article")
+  },[])
 
   useEffect(()=> {
     const fetchData = async () => {
@@ -25,20 +29,18 @@ const Article = () => {
   },[type])
 
   useEffect(() =>{
-    if(type==="announcement")
-      setTypeText("공지사항")
-    else if(type==="news")
-      setTypeText("동행뉴스")
-    else if(type==="24h")
-      setTypeText("동우24시")
-    else if(type==="gallery")
-      setTypeText("동우사보")
+    if(type==="all")
+      setTypeText("전체실적")
+    else if(type==="construction")
+      setTypeText("시공/관리")
+    else if(type==="plan")
+      setTypeText("계획/설계")
   },[type])
 
 
   return(
     <>
-      <PageHeader main="동행소식" sub={typeText} link={`/article/${type}`}/>
+      <PageHeader main="사업실적" sub={typeText} type="article" item={`${type}_header_title`} />
 
       {isLoading ? <div style={{width:"100vw", marginTop:'100px',marginBottom:"100px",  display:"flex", justifyContent:"center"}}><CircularProgress /></div> : 
         // type==="announcement" ?

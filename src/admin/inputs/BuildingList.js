@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import { firestore as db } from "firebase/firebase";
 
 import { Button, CircularProgress, TextField } from "@mui/material";
-import DropperImage from "src/public/components/DropperImage"
+import DropperImage from "src/public/DropperImage"
 
 const BuildingList = ({type, item, text}) => {
   const {data, setData, handleData} = useData()

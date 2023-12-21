@@ -1,0 +1,31 @@
+.top{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+}
+.top p{
+  margin-left: 10px;
+  font-weight: normal;
+}
+
+.content_container{
+  margin-top: 30px;
+  padding-left: 120px;
+  padding-right: 120px;
+}
+.content_container p{
+  white-space: pre-line;
+  position: relative; 
+}
+.content_container h4{
+  position: relative;
+}
+
+
+@media screen and (max-width: 992px) {
+  .content_container{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

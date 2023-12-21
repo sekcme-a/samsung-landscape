@@ -11,7 +11,7 @@ const Login = () => {
   const router = useRouter()
 
   useEffect(()=>{ 
-    if(user && userData && (userData.roles.includes("dongwoomain_super_admin")||userData.roles.includes("super_admin"))){
+    if(user && userData && (userData.roles.includes("samsung_super_admin")||userData.roles.includes("super_admin"))){
       setIsEditMode(true)
       router.push("/")
     }

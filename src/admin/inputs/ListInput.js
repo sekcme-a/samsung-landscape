@@ -36,7 +36,7 @@ const ListInput = ({type, item, text}) => {
       return;
     }
     setIsLoading(true)
-    await db.collection("data").doc(type).update({...data[type], [item] : values})
+    await db.collection("samsung").doc(type).update({...data[type], [item] : values})
     handleData(type, {...data[type], [item] : values})
     setIsLoading(false)
   }

@@ -10,7 +10,7 @@ const ListInput = ({type, item, text}) => {
   const {data, setData, handleData} = useData()
   const router = useRouter()
 
-  const [values, setValues] = useState([{title:"제목을 입력해주세요.", date:"날짜를 입력해주세요.", text:"내용을 입력해주세요."}])
+  const [values, setValues] = useState([{title:"", date:"", text:""}])
 
   const [isLoading, setIsLoading] = useState(false)
 
@@ -36,7 +36,7 @@ const ListInput = ({type, item, text}) => {
       return;
     }
     setIsLoading(true)
-    await db.collection("data").doc(type).update({...data[type], [item] : values})
+    await db.collection("samsung").doc(type).update({...data[type], [item] : values})
     handleData(type, {...data[type], [item] : values})
     setIsLoading(false)
   }

@@ -29,7 +29,10 @@ const BasicInput = ({type, item, text}) => {
       return;
     }
     setIsLoading(true)
-    await db.collection("data").doc(type).update(values)
+    if(type==="housing" || type==="building" || type==="estate" || type==="hrd" || type==="financial")
+      await db.collection("data").doc(type).update(values)
+    else
+      await db.collection("samsung").doc(type).update(values)
     handleData(type, values)
     setIsLoading(false)
   }

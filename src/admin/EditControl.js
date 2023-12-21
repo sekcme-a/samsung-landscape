@@ -11,7 +11,7 @@ const EditControl = () => {
   const router = useRouter()
 
 
-  if((userData?.roles?.includes("dongwoomain_super_admin")||userData?.roles?.includes("super_admin")))
+  if((userData?.roles?.includes("samsung_super_admin")||userData?.roles?.includes("super_admin")))
   return(
     <>
         <div className={styles.main_container} >
