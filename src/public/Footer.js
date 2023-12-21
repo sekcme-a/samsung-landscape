@@ -122,7 +122,7 @@ const Footer = () => {
                                     <a href={`tel:${data.footer.fax}`}>{data.footer.fax}</a>
                                         <EditButton type="footer" item="fax" text="FAX" />
                                     </li>
-                                    <li><a href="/info/map">찾아오는 길</a></li>
+                                    {/* <li><a href="/info/map">찾아오는 길</a></li> */}
                                 </ul>
                             </div>
                         </div>
