@@ -35,7 +35,7 @@ const OurMission = () => {
                                     <EditButton type="main" item="ourMission_text1" text="내용" />
                                 </p>
 
-                                <Link href="/performance/1">
+                                <Link href="/article/all">
                                     <a className="default-btn">보러가기<span></span></a>
                                 </Link>
                             </div>
@@ -63,7 +63,7 @@ const OurMission = () => {
                                     <EditButton type="main" item="ourMission_text2" text="내용" />
                                 </p>
 
-                                <Link href="/performance/2">
+                                <Link href="/article/construction">
                                     <a className="default-btn">보러가기 <span></span></a>
                                 </Link>
                             </div>

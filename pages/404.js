@@ -13,11 +13,11 @@ class Error extends Component {
                                     <img src="/images/404.png" alt="error" />
                                     
                                     <h3>Page Not Found</h3>
-                                    <p>The page you are looking for might have been removed had its name changed or is temporarily unavailable.</p>
+                                    <p>해당 페이지를 찾을 수 없습니다.</p>
 
                                     <Link href="/">
                                         <a className="default-btn">
-                                            Go to Home <span></span>
+                                            메인화면으로 돌아가기 <span></span>
                                         </a>
                                     </Link>
                                 </div>
