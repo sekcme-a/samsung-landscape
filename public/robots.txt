@@ -1,0 +1,4 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow:/
+Sitemap: https://xn--289a529abkak1w.kr/sitemap.xml

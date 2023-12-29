@@ -26,29 +26,6 @@ const Footer = () => {
                                         <EditButton type="footer" item="content" text="내용" />
                                     </p>
                                 </div>
-{/* 
-                                <ul className="social">
-                                    <li>
-                                        <a href="https://www.facebook.com/" target="_blank">
-                                            <i className="flaticon-facebook"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://twitter.com/" target="_blank">
-                                            <i className="flaticon-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.linkedin.com/" target="_blank">
-                                            <i className="flaticon-linkedin"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.instagram.com/" target="_blank">
-                                            <i className="flaticon-instagram"></i>
-                                        </a>
-                                    </li>
-                                </ul> */}
                             </div>
                         </div>
 
@@ -128,28 +105,6 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    {/* <div className="copyright-area">
-                        <div className="row align-items-center">
-                            <div className="col-lg-6 col-sm-6 col-md-6">
-                                <p><i className="far fa-copyright"></i> samsung Proudly Owned by </p>
-                            </div>
-
-                            <div className="col-lg-6 col-sm-6 col-md-6">
-                                <ul>
-                                    <li>
-                                        <Link href="#">
-                                            <a>Privacy Policy</a>
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="#">
-                                            <a>Terms & Conditions</a>
-                                        </Link>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div> */}
                 </div>
             </footer>
         </>

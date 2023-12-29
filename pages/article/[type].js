@@ -5,7 +5,7 @@ import { useRouter } from "next/router"
 import { useState, useEffect } from "react"
 import useData from "context/data"
 import AnnouncementCompo from "src/article/Announcement"
-
+import HeadMeta from 'src/public/HeadMeta';
 const Article = () => {
   const router = useRouter()
   const {type} = router.query
@@ -40,6 +40,14 @@ const Article = () => {
 
   return(
     <>
+
+<HeadMeta
+        title={`삼성조경-${typeText}`}
+        description="삼성조경, 더 나은 환경과 삶은 위한 풍요로움을 창출합니다."
+        url={`https://xn--289a529abkak1w.kr/article/${type}`}
+      />
+
+
       <PageHeader main="사업실적" sub={typeText} type="article" item={`${type}_header_title`} />
 
       {isLoading ? <div style={{width:"100vw", marginTop:'100px',marginBottom:"100px",  display:"flex", justifyContent:"center"}}><CircularProgress /></div> : 

@@ -45,9 +45,11 @@ export default class MyApp extends App {
         return (
             <>
                 <Head>
+                    <meta httpEquiv="X-UA-Compatible" content="IE=edge"></meta>
                     <meta charSet="utf-8" />
+                    <link rel="canonical" href="https://xn--289a529abkak1w.kr"></link>
+                    <meta name="robots" content="index,follow"></meta>
                     <meta name="viewport" content="width=device-width, initial-scale=1" />
-                    <title>삼성조경 - 도시를 아름답게 만드는 친환경 솔루션</title>
                 </Head>
 
                 <UserDataProvider>

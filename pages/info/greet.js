@@ -7,7 +7,7 @@ import { Grid } from "@mui/material"
 
 import styles from "src/info/Greet.module.css"
 import EditButton from "src/admin/EditButton"
-
+import HeadMeta from 'src/public/HeadMeta';
 const Greet = () => {
   const {data, fetch_data} = useData()
 
@@ -18,6 +18,15 @@ const Greet = () => {
 
   return(
     <>
+
+    <HeadMeta
+        title="삼성조경-인사말"
+        description="삼성조경의 인사말을 안내드립니다."
+        url="https://xn--289a529abkak1w.kr/info/greet"
+      />
+
+
+
       <PageHeader main="회사소개" sub="인사말" type="info" item="greet_header_title" />
       <div className="about-area ptb-100">
         <div className="container">
