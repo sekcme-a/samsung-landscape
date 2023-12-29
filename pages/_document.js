@@ -14,7 +14,7 @@ class MyDocument extends Document {
                         rel="stylesheet"
                     />
                     <link rel="icon" href="/images/favicon.png" />
-                    <link rel="icon" type="image/png" href="/images/logo.png"></link>
+                    <link rel="icon" type="image/png" href="/images/favicon.png"></link>
                     <Script
                         src={`//dapi.kakao.com/v2/maps/sdk.js?appkey=da751fb23c7f8cc96a72163af91ed742&libraries=services,clusterer&autoload=false`}
                         strategy="beforeInteractive"
