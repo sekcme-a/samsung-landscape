@@ -24,7 +24,7 @@ const Index = () => {
 
         <HeadMeta
         title="삼성조경"
-        description="삼성조경, 더 나은 환경과 삶은 위한 풍요로움을 창출합니다."
+        description="삼성조경, 더 나은 환경과 삶은 위한 풍요로움을 창출합니다. 자연과 도시가 공존하는 아름다운 조화를 꿈꾸며, 우리는 산업과 자연 사이의 조화로운 만남을 창조합니다."
         url="https://xn--289a529abkak1w.kr/"
       />
             {/* <Navbar /> */}
