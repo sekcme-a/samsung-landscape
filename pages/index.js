@@ -11,6 +11,7 @@ import Footer from "src/public/Footer"
 import useData from 'context/data';
 
 import HeadMeta from 'src/public/HeadMeta';
+import PopUp from 'src/public/PopUp';
 
 const Index = () => {
     const {data, fetch_data} = useData()
@@ -24,11 +25,13 @@ const Index = () => {
 
         <HeadMeta
         title="삼성조경"
-        description="삼성조경, 더 나은 환경과 삶은 위한 풍요로움을 창출합니다. 자연과 도시가 공존하는 아름다운 조화를 꿈꾸며, 우리는 산업과 자연 사이의 조화로운 만남을 창조합니다."
+        description="삼성조경, 더 나은 환경과 삶은 위한 풍요로움을 창출합니다. 조경 식재, 시설물 설치공사 등 창의적이고 지속 가능한 조경을 추구합니다."
         url="https://xn--289a529abkak1w.kr/"
       />
             {/* <Navbar /> */}
 
+
+            <PopUp />
             <Banner />
 
             {/* <ServicesBoxes />    */}
