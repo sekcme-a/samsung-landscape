@@ -16,12 +16,15 @@ const Footer = () => {
                             <div className="single-footer-widget">
                                 <div className="logo">
                                     <Link href="/">
-                                        <a>
+                                        <a style={{position:"relative"}}>
                                             <img src="/images/logo.png" alt="image" style={{width:"140px", backgroundColor:"white"}} />
+                                            <EditButton type="footer" item="logo_img" text="로고 이미지"
+                                            mode="image" defaultImg="/images/logo.png"
+                                        />
                                         </a>
                                     </Link>
 
-                                    <p>
+                                    <p style={{position:"relative"}}>
                                         {data.footer.content ?? "삼성조경은 항상 디자인과 기술력에 중점을 두어 혁신적인 프로젝트를 선보이고 있습니다. 최신 조경 기술을 적극적으로 도입하여 친환경적이고 지속 가능한 환경을 조성하는데 앞장서고 있습니다." }
                                         <EditButton type="footer" item="content" text="내용" />
                                     </p>
