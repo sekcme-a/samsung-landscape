@@ -62,7 +62,7 @@ class Navbar extends Component {
 
                                 <div className={classOne} id="navbarSupportedContent">
                                     <ul className="navbar-nav">
-                                    <li className="nav-item">
+                                        <li className="nav-item">
                                             <Link href="/" activeClassName="active">
                                                 <a className="nav-link">Home</a>
                                             </Link>
@@ -172,6 +172,12 @@ class Navbar extends Component {
                                                 </li>
                                                 
                                             </ul>
+                                        </li>
+
+                                        <li className="nav-item">
+                                            <Link href="/article/tree" activeClassName="active">
+                                                <a className="nav-link">나무병원</a>
+                                            </Link>
                                         </li>
 
                                     </ul>

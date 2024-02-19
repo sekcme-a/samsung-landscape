@@ -35,6 +35,8 @@ const Article = () => {
       setTypeText("시공/관리")
     else if(type==="plan")
       setTypeText("계획/설계")
+    else if (type==="tree")
+      setTypeText("나무병원 게시물")
   },[type])
 
 
@@ -48,7 +50,7 @@ const Article = () => {
       />
 
 
-      <PageHeader main="사업실적" sub={typeText} type="article" item={`${type}_header_title`} />
+      <PageHeader main={type==="tree" ? "나무병원" : "사업실적"} sub={typeText} type="article" item={`${type}_header_title`} />
 
       {isLoading ? <div style={{width:"100vw", marginTop:'100px',marginBottom:"100px",  display:"flex", justifyContent:"center"}}><CircularProgress /></div> : 
         // type==="announcement" ?
