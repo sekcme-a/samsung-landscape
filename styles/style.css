@@ -1142,8 +1142,15 @@ Main Banner Area CSS
   margin-bottom: 0;
   font-size: 65px;
   font-weight: 700;
+  word-break: keep-all;
 }
-
+.custom_title2{
+  color: #ffffff;
+  margin-bottom: 0;
+  font-size: 65px;
+  font-weight: 700;
+  word-break: keep-all;
+}
 .main-banner-content .btn-box {
   margin-top: 40px;
 }

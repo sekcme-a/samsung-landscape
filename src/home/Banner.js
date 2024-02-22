@@ -78,10 +78,10 @@ const Banner = () => {
                                             {data.main.banner_subtitle2}
                                             <EditButton type="main" item="banner_subtitle2" text="부제목2" />
                                         </span>
-                                        <h1 style={{position:"relative"}}>
+                                        <div style={{position:"relative"}} className='custom_title2'>
                                             {data.main.banner_title2}
                                             <EditButton type="main" item="banner_title2" text="제목2" />
-                                        </h1>
+                                        </div>
 
 
                                         <div className="btn-box">

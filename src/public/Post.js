@@ -42,7 +42,7 @@ const Post = ({data, type, id}) => {
   }
 
 
-  if(!data)
+  if(!data || data?.condition !=="게제중")
     return(
       <div style={{marginTop:"100px", marginBottom:"100px"}}>
         <div style={{ display:"flex", justifyContent:"center", flexWrap:"wrap"}}>

@@ -144,6 +144,11 @@ class Navbar extends Component {
                                                         <a className="nav-link">수목납품</a>
                                                     </Link>
                                                 </li>
+                                                <li className="nav-item">
+                                                    <Link href="/business/7" activeClassName="active">
+                                                        <a className="nav-link">나무병원</a>
+                                                    </Link>
+                                                </li>
                                             </ul>
                                         </li>
 
@@ -174,11 +179,11 @@ class Navbar extends Component {
                                             </ul>
                                         </li>
 
-                                        <li className="nav-item">
+                                        {/* <li className="nav-item">
                                             <Link href="/article/tree" activeClassName="active">
                                                 <a className="nav-link">나무병원</a>
                                             </Link>
-                                        </li>
+                                        </li> */}
 
                                     </ul>
 
