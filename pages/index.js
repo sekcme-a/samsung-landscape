@@ -1,12 +1,10 @@
 import React, { useEffect } from 'react';
-import Navbar from '../src/public/Navbar';
 
 import Banner from '../src/home/Banner';
 import About from "src/home/About"
 import About2 from "src/home/About2"
 import WhyChooseUs from "src/home/WhyChooseUs"
 import OurMission from "src/home/OurMission"
-import Footer from "src/public/Footer"
 
 import useData from 'context/data';
 
