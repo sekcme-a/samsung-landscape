@@ -107,7 +107,7 @@ class Navbar extends Component {
 
 
                                         <li className="nav-item">
-                                            <Link href="/business">
+                                            <Link href="/business/1">
                                                 <a className="nav-link" onClick={e => e.preventDefault()}>
                                                     사업영역 <i className="flaticon-down-arrow"></i>
                                                 </a>
