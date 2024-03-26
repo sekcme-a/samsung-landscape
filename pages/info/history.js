@@ -18,8 +18,8 @@ const Greet = () => {
     <>
 
 <HeadMeta
-        title="삼성조경-회사연혁"
-        description="삼성조경의 회사연혁을 안내드립니다."
+        title="회사연혁 - 삼성조경"
+        description="삼성조경의 창립부터 현재까지의 회사연혁을 안내드립니다."
         url="https://xn--289a529abkak1w.kr/info/history"
       />
 

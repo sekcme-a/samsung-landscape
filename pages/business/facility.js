@@ -18,10 +18,10 @@ const Two = () => {
   return(
     <>
 
-<HeadMeta
-        title="삼성조경-조경시설물설치공사"
-        description="삼성조경 사업영역 중 조경시설물설치공사에 대해 안내드립니다."
-        url="https://xn--289a529abkak1w.kr/business/2"
+      <HeadMeta
+        title="조경시설물설치공사 - 삼성조경"
+        description="풍부한 녹지 공간 조성, 조경 시설물 설치, 기능적이고 환경 친화적 설계. 삼성조경의 조경시설물설치공사입니다."
+        url="https://xn--289a529abkak1w.kr/business/facility"
       />
       <PageHeader main="사업영역" sub="조경시설물설치공사" type="business" item="two_header_title" />
       <Business />

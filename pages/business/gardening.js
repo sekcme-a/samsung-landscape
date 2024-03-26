@@ -5,7 +5,7 @@ import PageHeader from "../../src/public/PageHeader"
 import useData from "context/data"
 import { Grid } from "@mui/material"
 
-import Business from "src/business/seven/Business"
+import Business from "src/business/four/Business"
 import HeadMeta from 'src/public/HeadMeta';
 const One = () => {
   const {data, fetch_data} = useData()
@@ -17,15 +17,14 @@ const One = () => {
 
   return(
     <>
-
-<HeadMeta
-        title="삼성조경-나무병원"
-        description="삼성조경 사업영역 중 나무병원에 대해 안내드립니다."
-        url="https://xn--289a529abkak1w.kr/business/7"
+          <HeadMeta
+        title="벽면녹화(수직정원) - 삼성조경"
+        description="수직정원의 아름다움과 공간 활용, 다양한 종류의 식물과 조화로운 디자인. 삼성조경의 벽면녹화입니다."
+        url="https://xn--289a529abkak1w.kr/business/gardening"
       />
 
 
-      <PageHeader main="사업영역" sub="나무병원" type="business" item="seven_header_title" />
+      <PageHeader main="사업영역" sub="벽면녹화(수직정원)" type="business" item="four_header_title" />
       <Business />
     </>
   )

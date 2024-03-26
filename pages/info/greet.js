@@ -20,8 +20,8 @@ const Greet = () => {
     <>
 
     <HeadMeta
-        title="삼성조경-인사말"
-        description="삼성조경의 인사말을 안내드립니다."
+        title="인사말 - 삼성조경"
+        description="안녕하세요. 삼성조경 주식회사입니다. 우리는 더 나은 미래를 위한 조경 및 환경 디자인 솔루션을 제공하는 회사로서, 자연과 도시를 조화롭게 연결하는 데 최선을 다하고 있습니다."
         url="https://xn--289a529abkak1w.kr/info/greet"
       />
 

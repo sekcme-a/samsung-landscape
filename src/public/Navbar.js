@@ -107,45 +107,45 @@ class Navbar extends Component {
 
 
                                         <li className="nav-item">
-                                            <Link href="/business/1">
+                                            <Link href="/business/forest">
                                                 <a className="nav-link" onClick={e => e.preventDefault()}>
                                                     사업영역 <i className="flaticon-down-arrow"></i>
                                                 </a>
                                             </Link>
                                             <ul className="dropdown-menu">
                                                 <li className="nav-item">
-                                                    <Link href="/business/1" activeClassName="active">
+                                                    <Link href="/business/forest" activeClassName="active">
                                                         <a className="nav-link">조경식재공사</a>
                                                     </Link>
                                                 </li>
 
                                                 <li className="nav-item">
-                                                    <Link href="/business/2" activeClassName="active">
+                                                    <Link href="/business/facility" activeClassName="active">
                                                         <a className="nav-link">조경시설물설치공사</a>
                                                     </Link>
                                                 </li>
                                                 <li className="nav-item">
-                                                    <Link href="/business/3" activeClassName="active">
+                                                    <Link href="/business/design" activeClassName="active">
                                                         <a className="nav-link">{`조경설계(정원설계)`}</a>
                                                     </Link>
                                                 </li>
                                                 <li className="nav-item">
-                                                    <Link href="/business/4" activeClassName="active">
+                                                    <Link href="/business/gardening" activeClassName="active">
                                                         <a className="nav-link">{`벽면녹화(수직정원)`}</a>
                                                     </Link>
                                                 </li>
                                                 <li className="nav-item">
-                                                    <Link href="/business/5" activeClassName="active">
+                                                    <Link href="/business/construction" activeClassName="active">
                                                         <a className="nav-link">정원시공</a>
                                                     </Link>
                                                 </li>
                                                 <li className="nav-item">
-                                                    <Link href="/business/6" activeClassName="active">
+                                                    <Link href="/business/delivery" activeClassName="active">
                                                         <a className="nav-link">수목납품</a>
                                                     </Link>
                                                 </li>
                                                 <li className="nav-item">
-                                                    <Link href="/business/7" activeClassName="active">
+                                                    <Link href="/business/tree" activeClassName="active">
                                                         <a className="nav-link">나무병원</a>
                                                     </Link>
                                                 </li>

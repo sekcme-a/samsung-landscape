@@ -18,8 +18,8 @@ const Greet = () => {
     <>
 
 <HeadMeta
-        title="삼성조경-찾아오는 길"
-        description="삼성조경에 찾아오는 길을 안내드립니다."
+        title="찾아오는 길 - 삼성조경"
+        description="삼성조경에 찾아오는 길을 안내드립니다. 서울특별시 도봉구 시루봉로 234, 동우빌딩 2층"
         url="https://xn--289a529abkak1w.kr/info/map"
       />
 

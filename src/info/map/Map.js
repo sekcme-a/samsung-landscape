@@ -63,9 +63,6 @@ const Map = () => {
                     </div>
                 </div>
                 
-                {/* <div className="bg-map">
-                    <img src="/images/bg-map.png" alt="image" />
-                </div> */}
             </section>
         </>
     );

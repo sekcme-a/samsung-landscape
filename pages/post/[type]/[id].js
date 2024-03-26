@@ -5,6 +5,7 @@ import { useState } from "react"
 import { useEffect } from "react"
 import PageHeader from "../../../src/public/PageHeader"
 import PostCompo from "src/public/Post"
+import HeadMeta from "src/public/HeadMeta"
 
 const Post = () => {
   const router = useRouter()
@@ -45,6 +46,12 @@ const Post = () => {
 
   return(
     <>
+     <HeadMeta
+        title="사업실적 - 삼성조경"
+        description="삼성조경의 사업실적 게시물입니다. 삼성조경은 조경 및 환경 디자인 솔루션을 제공하는 회사로서, 자연과 도시를 조화롭게 연결하는데 최선을 다하고 있습니다."
+        url="https://xn--289a529abkak1w.kr/article/all"
+      />
+
       <PageHeader main={type==="tree" ? "나무병원" : "사업실적"} sub={typeText} type="article" item={`${type}_header_title`}/>
 
       {isLoading ? 

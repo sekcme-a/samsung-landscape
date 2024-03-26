@@ -1080,17 +1080,6 @@ Main Banner Area CSS
   background-image: url(/images/main-banner2.jpg);
 }
 
-.item-bg3 {
-  background-image: url(/images/main-banner3.jpg);
-}
-
-.item-bg4 {
-  background-image: url(/images/main-banner4.jpg);
-}
-
-.item-bg5 {
-  background-image: url(/images/main-banner5.jpg);
-}
 
 .banner-section {
   height: 100vh;

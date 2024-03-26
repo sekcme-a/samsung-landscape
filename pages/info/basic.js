@@ -22,8 +22,8 @@ const Greet = () => {
     <>
 
 <HeadMeta
-        title="삼성조경-기본정보"
-        description="삼성조경의 기본정보를 안내드립니다."
+        title="기본정보 - 삼성조경"
+        description="삼성조경 주식회사는 조경 및 환경 디자인 솔루션을 제공하는 회사로서, 자연과 도시를 조화롭게 연결하는데 최선을 다하고 있습니다."
         url="https://xn--289a529abkak1w.kr/info/basic"
       />
 

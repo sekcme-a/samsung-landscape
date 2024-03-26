@@ -18,9 +18,9 @@ const One = () => {
   return(
     <>
           <HeadMeta
-        title="삼성조경-조경설계(정원설계)"
-        description="삼성조경 사업영역 중 조경설계(정원설계)에 대해 안내드립니다."
-        url="https://xn--289a529abkak1w.kr/business/3"
+        title="조경설계(정원설계) - 삼성조경"
+        description="삼성조경의 조경설계는 창의적 디자인과 기술적 전문성, 환경 친화적이고 지속 가능한 접근, 고객과의 긴밀한 협력을 위해 노력합니다."
+        url="https://xn--289a529abkak1w.kr/business/design"
       />
 
       

@@ -53,7 +53,7 @@ const Banner = () => {
                                             <Link href="/info/greet">
                                                 <a className="default-btn">회사소개 보러가기<span></span></a>
                                             </Link>
-                                            <Link href="/business/1">
+                                            <Link href="/business/forest">
                                                 <a className="optional-btn">사업영역 보러가기<span></span></a>
                                             </Link>
                                         </div>
@@ -88,7 +88,7 @@ const Banner = () => {
                                             <Link href="/info/greet">
                                                 <a className="default-btn">회사소개 보러가기<span></span></a>
                                             </Link>
-                                            <Link href="/business/1">
+                                            <Link href="/business/forest">
                                                 <a className="optional-btn">사업영역 보러가기<span></span></a>
                                             </Link>
                                         </div>
