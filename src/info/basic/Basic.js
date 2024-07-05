@@ -46,7 +46,7 @@ const Basic = () => {
 
                           <div className="col-lg-6 col-md-6">
                               <div className="benefits-image" style={PO}>
-                                  <img src={data.info.basic_img} alt="image" style={{objectFit:"cover", overflow:'hidden', maxHeight:"700px"}}/>
+                                  <img src={data.info.basic_img} alt="삼성조경" style={{objectFit:"cover", overflow:'hidden', maxHeight:"700px"}}/>
                                   <EditButton type="info" item="basic_img" mode="image" defaultImg="/image/basic.jpg" text="이미지" />
                               </div>
                           </div>

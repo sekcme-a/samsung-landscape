@@ -78,7 +78,7 @@ const PopUp = () => {
             return(
               <div
                 className={`${styles.main_container} ${styles[`main_${index}`]} ${item.isHeight? styles.isHeight: styles.isWidth} ${item.linkUrl && item.linkUrl!=="" ? styles.hasUrl: styles.noUrl}`} key={index}>
-                <img src={item.thumbnailImg} alt={item.title} onClick={()=>handlePopupClick(item.linkUrl)}/>
+                <img src={item.thumbnailImg} alt={item.title?? "팝업"} onClick={()=>handlePopupClick(item.linkUrl)}/>
 
                 <div className={styles.bottom_container}>
                   <h4>{item.title}</h4>

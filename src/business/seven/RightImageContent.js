@@ -33,7 +33,7 @@ const RightImageContent = () => {
     </div>
 
     <div className="services-details-image" style={{position:"relative"}}>
-        <img src={data.business.seven_1_img} alt="image" />
+        <img src={data.business.seven_1_img} alt="나무병원 우측" />
         <EditButton type="business" item="seven_1_img" text="이미지" mode="image" defaultImg="/image/default_garden.jpg"/>
     </div>
 </div>

@@ -17,7 +17,7 @@ const Footer = () => {
                                 <div className="logo">
                                     <Link href="/">
                                         <a style={{position:"relative"}}>
-                                            <img src={data.footer.logo_img} alt="image" style={{width:"140px", backgroundColor:"white"}} />
+                                            <img src={data.footer.logo_img} alt="로고" style={{width:"140px", backgroundColor:"white"}} />
                                             <EditButton type="footer" item="logo_img" text="로고 이미지"
                                             mode="image" defaultImg="/images/logo.png"
                                         />

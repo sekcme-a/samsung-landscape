@@ -7,7 +7,7 @@ const LeftImageContent = () => {
   return(
     <div className="services-details-overview">
     <div className="services-details-image" style={{position:"relative"}}>
-        <img src={data.business.three_2_img} alt="image" />
+        <img src={data.business.three_2_img} alt="조경설계" />
         <EditButton type="business" item="three_2_img" text="이미지" mode="image" defaultImg="/image/default_garden.jpg"/>
     </div>
     <div className="services-details-desc">

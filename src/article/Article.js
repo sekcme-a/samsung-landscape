@@ -23,7 +23,7 @@ const NewsCardContent = ({type, data}) => {
                 <div className="post-image">
                     <Link href={`/post/${type}/${data.id}`}>
                         <a>
-                            <img src={data.thumbnailImg} alt={data.title} />
+                            <img src={data.thumbnailImg} alt={data.title ?? "article"} />
                         </a>
                     </Link>
 

@@ -25,7 +25,7 @@ const OrganizationImage = () => {
       <div style={{position:"relative", width:"1px", height:"1px"}} >
         <EditButton type="info" item="organization_img" text="조직도 이미지 삽입" mode="image" defaultImg="/image/organization.png"/>
       </div>
-      <img src={data.info.organization_img} />
+      <img src={data.info.organization_img} alt="조직도"/>
     </div>
   )
 }
