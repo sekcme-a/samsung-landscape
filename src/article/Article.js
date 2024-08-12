@@ -28,7 +28,7 @@ const NewsCardContent = ({type, data}) => {
                     </Link>
 
                     <div className="date">
-                        <i className="flaticon-calendar"></i> {formatDateToYYYYMMDD(data?.savedAt?.toDate())}
+                        <i className="flaticon-calendar"></i> {data?.publishedAt}
                     </div>
                 </div>
 

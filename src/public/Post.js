@@ -65,7 +65,7 @@ const Post = ({data, type, id}) => {
       <Grid container>
         <Grid item xs={12} md={9}>
           <div className={styles.written_info}>
-            <p><strong>게제일:</strong> {formatDateToYYYYMMDD(data?.savedAt?.toDate())} / <strong>작성자:</strong> {data?.author}</p>
+            <p><strong>게제일:</strong> {data?.publishedAt} / <strong>작성자:</strong> {data?.author}</p>
           </div>
           <h2>{data?.title}</h2>
           <div className={styles.content_container}>

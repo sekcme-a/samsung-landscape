@@ -75,7 +75,7 @@ const ArticleList = ({list, countPerPage}) => {
             <div className={styles.no}>{list?.length-((10*(page-1))+index)}</div>
             <div className={styles.title}>{item.title}</div>
             <div className={styles.author}>{item.author}</div>
-            <div className={styles.published_at}>{formatDateToYYYYMMDD(item?.publishedAt.toDate())}</div>
+            <div className={styles.published_at}>{item?.publishedAt}</div>
           </li>
         ))}
 
@@ -93,7 +93,7 @@ const ArticleList = ({list, countPerPage}) => {
         {listForThisPage?.map((item, index) => (
           <li key={index} onClick={()=>handleItemclick(item.id)}>
             <div className={styles.title}>{item.title}</div>
-            <div className={styles.published_at}>{formatDateToYYYYMMDD(item?.publishedAt.toDate())}</div>
+            <div className={styles.published_at}>{item?.publishedAt}</div>
           </li>
         ))}
 
