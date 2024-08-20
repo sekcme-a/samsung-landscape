@@ -28,9 +28,10 @@ const Banner = () => {
                     pauseOnMouseEnter: true,
                 }}
                 modules={[Navigation, Autoplay]} 
-                className="home-area home-slides"
+                className="home-slides"
+                
             >
-                <SwiperSlide>
+                <SwiperSlide >
                     <div className="main-banner" style={{backgroundImage:`url(${data.main.banner_bg1})`}}>
                         <EditButton
                             type="main" item="banner_bg1" text="배경이미지 삽입" mode="image" defaultImg="/images/main-banner1.jpg" 
@@ -40,7 +41,7 @@ const Banner = () => {
                             <div className="d-table-cell">
                                 <div className="container">
                                     <div className="main-banner-content">
-                                        <span className="sub-title">
+                                        <span className="sub-title" >
                                             {data.main.banner_subtitle1}
                                             <EditButton type="main" item="banner_subtitle1" text="부제목1" />
                                         </span>
@@ -49,8 +50,8 @@ const Banner = () => {
                                             <EditButton type="main" item="banner_title1" text="제목1" />
                                         </h1>
 
-                                        <div className="btn-box">
-                                            <Link href="/info/greet">
+                                        <div className="btn-box" >
+                                            <Link href="/info/greet" style={{zIndex:"999999"}} legacyBehavior>
                                                 <a className="default-btn">회사소개 보러가기<span></span></a>
                                             </Link>
                                             <Link href="/business/forest">
@@ -61,6 +62,7 @@ const Banner = () => {
                                 </div>
                             </div>
                         </div>
+                        <div className='home-area' />
                     </div>
                 </SwiperSlide>
 
@@ -96,9 +98,10 @@ const Banner = () => {
                                 </div>
                             </div>
                         </div>
+                        <div className='home-area' />
                     </div>
                 </SwiperSlide>
-
+                
             </Swiper>
 		</>
     );

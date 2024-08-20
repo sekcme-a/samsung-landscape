@@ -1248,7 +1248,9 @@ Main Banner Area CSS
 .main-banner-content form .default-btn:hover {
   color: #329411;
 }
-
+.btn-box{
+  z-index: 999 !important;
+}
 .home-area {
   position: relative;
   z-index: 1;

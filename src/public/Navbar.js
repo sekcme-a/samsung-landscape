@@ -170,11 +170,11 @@ class Navbar extends Component {
                                                         <a className="nav-link">시공 · 관리</a>
                                                     </Link>
                                                 </li>
-                                                <li className="nav-item">
+                                                {/* <li className="nav-item">
                                                     <Link href="/article/plan" activeClassName="active">
                                                         <a className="nav-link">계획 · 설계</a>
                                                     </Link>
-                                                </li>
+                                                </li> */}
                                                 
                                             </ul>
                                         </li>
