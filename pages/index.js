@@ -21,7 +21,7 @@ const Index = () => {
   return (
     <>
       <HeadMeta
-        title="삼성조경-도봉구 조경회사"
+        title="삼성조경 - 도봉구 조경회사"
         description="삼성조경은 도봉구 조경 식재, 시설물 설치공사 등 창의적이고 지속 가능한 조경을 추구합니다."
         url="https://xn--289a529abkak1w.kr"
       />

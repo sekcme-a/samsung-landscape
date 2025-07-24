@@ -29,7 +29,7 @@ class MyDocument extends Document {
             href="https://xn--289a529abkak1w.kr/images/favicon.png"
           ></link>
           <link rel="canonical" href="https://xn--289a529abkak1w.kr" />
-          <meta property="og:site_name" content="삼성조경-도봉구 조경회사" />
+          <meta property="og:site_name" content="삼성조경 - 도봉구 조경회사" />
           <Script
             src={`//dapi.kakao.com/v2/maps/sdk.js?appkey=da751fb23c7f8cc96a72163af91ed742&libraries=services,clusterer&autoload=false`}
             strategy="beforeInteractive"
