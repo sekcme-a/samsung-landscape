@@ -50,13 +50,13 @@ const Banner = () => {
                       className="sub-title"
                       style={{
                         color:
-                          data.main.banner_subtitle1.trim() === ""
+                          data.main.banner_subtitle1?.trim() === ""
                             ? "transparent"
                             : "",
                       }}
                     >
                       {data.main.banner_subtitle1 &&
-                      data.main.banner_subtitle1.trim() !== ""
+                      data.main.banner_subtitle1?.trim() !== ""
                         ? data.main.banner_subtitle1
                         : "-"}
                       <EditButton
@@ -119,13 +119,13 @@ const Banner = () => {
                       className="sub-title"
                       style={{
                         color:
-                          data.main.banner_subtitle2.trim() === ""
+                          data.main.banner_subtitle2?.trim() === ""
                             ? "transparent"
                             : "",
                       }}
                     >
                       {data.main.banner_subtitle2 &&
-                      data.main.banner_subtitle2.trim() !== ""
+                      data.main.banner_subtitle2?.trim() !== ""
                         ? data.main.banner_subtitle2
                         : "-"}
                       <EditButton
