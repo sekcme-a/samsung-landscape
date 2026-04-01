@@ -33,6 +33,10 @@ export default function RootLayout({ children }) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <head>
+        <meta
+          name="naver-site-verification"
+          content="ae65a57e415dd7b32e251f9a63f355f892b247e0"
+        />
         <Script
           src={`//dapi.kakao.com/v2/maps/sdk.js?appkey=da751fb23c7f8cc96a72163af91ed742&libraries=services,clusterer&autoload=false`}
           strategy="beforeInteractive"
