@@ -1,0 +1,14 @@
+.main_container{
+  padding: 50px 200px;
+}
+
+@media screen and (max-width: 1189px) {
+  .main_container{
+    padding: 30px 50px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .main_container{
+    padding: 20px 0px;
+  }
+}

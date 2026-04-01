@@ -1,0 +1,224 @@
+.mainWrapper {
+  min-height: 100vh;
+  padding-bottom: 5rem;
+}
+
+.section {
+  padding-top: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.container {
+  max-width: 64rem; /* max-w-5xl */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Breadcrumbs */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.breadcrumb a:hover {
+  color: #000;
+}
+
+.breadcrumbActive {
+  color: #2563eb;
+  font-weight: 700;
+}
+
+/* Article Card */
+.articleCard {
+  background-color: #fff;
+  /* border-top: 2px solid #000; */
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.header {
+  padding: 2rem 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .header {
+    padding: 2rem 2.5rem;
+  }
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  /* margin-bottom: 1.5rem; */
+  line-height: 1.375;
+  word-break: keep-all;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 1.875rem;
+  }
+}
+
+.metaContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 1.5rem;
+  row-gap: 0.5rem;
+  font-size: 13px;
+  color: #6b7280;
+  border-top: 1px solid #f9fafb;
+  padding-top: 1.5rem;
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.metaIcon {
+  width: 1rem;
+  height: 1rem;
+  color: #9ca3af;
+}
+
+.authorName {
+  font-weight: 600;
+  color: #374151;
+}
+
+/* Content Area */
+.contentArea {
+  padding: 3rem 1.5rem;
+  border-top: 1px solid #f3f4f6;
+  min-height: 500px;
+}
+
+@media (min-width: 768px) {
+  .contentArea {
+    padding: 3rem 2.5rem;
+  }
+}
+
+/* Tiptap Editor & Global Prose Styles */
+.tiptapWrapper :global(.prose) {
+  max-width: none;
+  font-size: 1.05rem;
+  color: #333;
+  line-height: 1.625;
+  word-break: keep-all;
+}
+
+.tiptapWrapper :global(.prose p) {
+  margin-bottom: 1.5rem;
+}
+
+.tiptapWrapper :global(.prose img) {
+  border-radius: 8px;
+  margin: 2rem auto;
+  display: block;
+}
+
+.tiptapWrapper :global(.prose ul) {
+  list-style-type: disc !important;
+  padding-left: 1.5rem !important;
+  margin-bottom: 1.5rem;
+}
+
+.tiptapWrapper :global(.prose ol) {
+  list-style-type: decimal !important;
+  padding-left: 1.5rem !important;
+  margin-bottom: 1.5rem;
+}
+
+.tiptapWrapper :global(.prose a) {
+  color: #2563eb;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+/* Attachments */
+.attachmentSection {
+  padding: 1.5rem 1.5rem;
+  background-color: #f9fafb;
+  border-top: 1px solid #f3f4f6;
+}
+
+@media (min-width: 768px) {
+  .attachmentSection {
+    padding: 1.5rem 2.5rem;
+  }
+}
+
+.attachmentLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 13px;
+  font-weight: 700;
+  color: #6b7280;
+  margin-top: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: -0.025em;
+}
+
+.fileList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.fileLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.375rem 0.75rem;
+  background-color: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  font-medium: 500;
+  color: #374151;
+  transition: all 0.2s;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.fileLink:hover {
+  border-color: #60a5fa;
+  color: #2563eb;
+}
+
+/* Bottom Actions */
+.actionArea {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.listBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 2rem;
+  background-color: #fff;
+  border: 1px solid #d1d5db;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #4b5563;
+  transition: all 0.2s;
+}
+
+.listBtn:hover {
+  background-color: #111827;
+  color: #fff;
+}

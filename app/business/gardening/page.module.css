@@ -1,0 +1,162 @@
+/* BusinessSplit.module.css */
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+/* Header */
+.headerSection {
+  margin-bottom: 80px;
+  text-align: left;
+}
+
+.headerSection h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  color: #064e3b;
+  margin-bottom: 15px;
+}
+
+.headerSection p {
+  font-size: 1.1rem;
+  color: #4b5563;
+  border-left: 3px solid #10b981;
+  padding-left: 15px;
+}
+
+/* Main Layout */
+.contentGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+}
+
+.row {
+  display: flex;
+  flex-direction: column; /* 모바일 우선: 세로 배치 */
+  gap: 40px;
+}
+
+@media (min-width: 1024px) {
+  .row {
+    flex-direction: row; /* 데스크톱: 가로 배치 */
+    align-items: stretch;
+  }
+  .rowReverse {
+    flex-direction: row-reverse;
+  }
+  .imageSide,
+  .textSide {
+    flex: 1;
+  }
+}
+
+/* Image Side */
+.imageSide {
+  position: relative;
+  min-height: 350px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.imageSide img {
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.imageSide:hover img {
+  transform: scale(1.05);
+}
+
+/* Text Side */
+.textSide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sectionTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #111827;
+}
+
+/* List Item Cards */
+.cardList {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  border-color: #10b981;
+}
+
+.card h4 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #064e3b;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card h4::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #10b981;
+  border-radius: 50%;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* Bottom CTA */
+.footerBanner {
+  background: #064e3b;
+  border-radius: 30px;
+  padding: 60px 40px;
+  text-align: center;
+  color: white;
+  margin-top: 100px;
+}
+
+.footerBanner h2 {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+}
+
+.ctaBtn {
+  background: #10b981;
+  color: white;
+  padding: 15px 35px;
+  border-radius: 12px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.ctaBtn:hover {
+  background: #059669;
+}

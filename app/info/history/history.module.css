@@ -1,0 +1,140 @@
+/* 변수 설정 - 조경 회사에 어울리는 색상 */
+.wrapper {
+  --primary-color: #2d5a27; /* 진한 초록 */
+  --accent-color: #8bc34a; /* 연한 초록 */
+  --text-main: #333;
+  --text-muted: #666;
+  --bg-light: #f9fbf9;
+  --line-color: #e0e0e0;
+
+  background-color: #fff;
+  font-family: "Pretendard", sans-serif;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.timeline {
+  position: relative;
+  padding: 40px 0;
+}
+
+/* 중앙 수직선 */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--line-color);
+  transform: translateX(-50%);
+}
+
+.timelineItem {
+  display: flex;
+  justify-content: flex-between;
+  align-items: center;
+  margin-bottom: 60px;
+  width: 100%;
+  position: relative;
+}
+
+/* 타임라인 점 */
+.timelineDot {
+  position: absolute;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  border: 4px solid var(--primary-color);
+  border-radius: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.timelineItem:hover .timelineDot {
+  background: var(--primary-color);
+  box-shadow: 0 0 0 5px rgba(45, 90, 39, 0.2);
+}
+
+/* 날짜 영역 */
+.timelineDate {
+  width: 50%;
+  padding: 0 40px;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  text-align: right;
+}
+
+/* 콘텐츠 카드 */
+.timelineContent {
+  width: 50%;
+  padding: 30px;
+  background: var(--bg-light);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.timelineItem:hover .timelineContent {
+  transform: translateY(-5px);
+}
+
+.timelineTitle {
+  margin: 0 0 10px 0;
+  font-size: 1.25rem;
+  color: var(--text-main);
+  font-weight: 700;
+}
+
+.timelineText {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.6;
+  word-break: keep-all;
+}
+
+/* 지그재그 배치 (짝수번째 아이템) */
+.timelineItem:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.timelineItem:nth-child(even) .timelineDate {
+  text-align: left;
+}
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timelineItem {
+    flex-direction: column !important;
+    align-items: flex-start;
+    padding-left: 50px;
+    margin-bottom: 40px;
+  }
+
+  .timelineDot {
+    left: 20px;
+  }
+
+  .timelineDate {
+    width: 100%;
+    text-align: left !important;
+    padding: 0 0 10px 0;
+    font-size: 1.2rem;
+  }
+
+  .timelineContent {
+    width: 100%;
+    padding: 20px;
+  }
+}

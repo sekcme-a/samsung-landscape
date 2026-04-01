@@ -1,0 +1,179 @@
+/* BusinessWindow.module.css */
+.wrapper {
+  background-color: #ffffff;
+  color: #111111;
+  font-family:
+    "Pretendard",
+    -apple-system,
+    sans-serif;
+  overflow-x: hidden;
+}
+
+.inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 100px 24px;
+}
+
+/* Header Section */
+.hero {
+  text-align: center;
+  margin-bottom: 150px;
+}
+
+.category {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #16a34a; /* 포인트 컬러: 초록색 */
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.heroTitle {
+  font-size: clamp(2.5rem, 6vw, 3.8rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  margin-bottom: 30px;
+}
+
+.heroSubtitle {
+  font-size: 1.15rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* Window Grid System */
+.gridContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 180px; /* 섹션 간 넓은 여백 */
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr; /* 모바일: 세로 배치 */
+  gap: 50px;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .row {
+    grid-template-columns: 1.1fr 0.9fr; /* 데스크톱: 비대칭 그리드 */
+  }
+  .rowReverse {
+    direction: rtl; /* 데스크톱: 이미지와 텍스트 위치 반전 */
+  }
+  .rowReverse > * {
+    direction: ltr; /* 내부 텍스트 정렬은 정상으로 */
+  }
+}
+
+/* Image Side (The Window) */
+.windowFrame {
+  position: relative;
+  aspect-ratio: 16 / 11;
+  overflow: hidden;
+  border-radius: 4px; /* 미니멀한 둥글기 */
+  box-shadow: 25px 25px 80px rgba(0, 0, 0, 0.07); /* 깊이감 있는 그림자 */
+}
+
+.windowFrame img {
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.row:hover img {
+  transform: scale(1.08); /* 호버 시 미세한 확대 */
+}
+
+/* Text Side (The Caption) */
+.content {
+  padding-top: 10px;
+}
+
+.contentTitle {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 800;
+  color: #111;
+  line-height: 1.2;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+/* 타이틀 아래 포인트 바 */
+.contentTitle::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background-color: #111;
+}
+
+/* Story List */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.listItem {
+  display: flex;
+  gap: 20px;
+}
+
+.itemLabel {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #16a34a;
+  white-space: nowrap;
+  border-top: 2px solid #16a34a; /* 제목 위에 선 */
+  padding-top: 8px;
+}
+
+.itemText {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.7;
+  padding-top: 8px;
+}
+
+/* Footer Banner */
+.footer {
+  margin-top: 150px;
+  padding: 120px 24px;
+  background-color: #0c2111; /* 짙은 초록색 배경 */
+  color: #fff;
+  text-align: center;
+}
+
+.footerTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.ctaBtn {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 16px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ctaBtn:hover {
+  background: #fff;
+  color: #0c2111;
+  border-color: #fff;
+  transform: translateY(-3px);
+}

@@ -1,0 +1,207 @@
+/* components/Business.module.css */
+
+/* Hero Section */
+.heroSection {
+  position: relative;
+  padding: 80px 24px 64px;
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 16px;
+  background-color: #f0fdf4;
+  color: #15803d;
+  font-size: 0.875rem;
+  font-weight: 700;
+  border-radius: 9999px;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+}
+
+.mainTitle {
+  font-size: clamp(2.5rem, 5vw, 3.75rem);
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  color: #020617;
+  margin-bottom: 24px;
+}
+
+.subTitle {
+  max-width: 42rem;
+  margin: 0 auto;
+  font-size: 1.125rem;
+  color: #64748b;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+/* Main Content */
+.mainContent {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px 128px;
+}
+
+.section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  align-items: center;
+  margin-bottom: 128px;
+}
+
+@media (min-width: 1024px) {
+  .section {
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .imageCol {
+    grid-column: span 7;
+  }
+  .textCol {
+    grid-column: span 5;
+  }
+}
+
+/* Image Styles */
+.imageWrapper {
+  position: relative;
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+  aspect-ratio: 4/3;
+}
+
+.imageWrapper img {
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.imageWrapper:hover img {
+  transform: scale(1.1);
+}
+
+.grayscaleImg {
+  filter: grayscale(100%);
+  transition:
+    filter 0.8s ease,
+    transform 0.7s ease;
+}
+
+.grayscaleImg:hover {
+  filter: grayscale(0%);
+}
+
+/* List Styles */
+.listContainer {
+  margin-top: 40px;
+}
+
+.listItem {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.itemNumber {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background-color: #f8fafc;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #16a34a;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.listItem:hover .itemNumber {
+  background-color: #16a34a;
+  color: white;
+}
+
+.itemContent h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.itemContent p {
+  color: #64748b;
+  line-height: 1.5;
+}
+
+/* Card Style for Section 2 */
+.infoCard {
+  padding: 32px;
+  background-color: #f8fafc;
+  border: 1px solid #f1f5f9;
+  border-radius: 2rem;
+  transition: all 0.3s ease;
+}
+
+.infoCard:hover {
+  border-color: #bbf7d0;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+/* CTA Section */
+.ctaContainer {
+  max-width: 1152px;
+  margin: 0 auto 96px;
+  padding: 0 24px;
+}
+
+.ctaBox {
+  background-color: #0f172a;
+  border-radius: 3rem;
+  padding: 80px 48px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaTitle {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 16px;
+}
+
+.ctaTitle span {
+  color: #4ade80;
+}
+
+.ctaDesc {
+  color: #94a3b8;
+  margin-bottom: 32px;
+}
+
+.btnGroup {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.primaryBtn {
+  padding: 16px 40px;
+  background-color: #22c55e;
+  color: white;
+  font-weight: 700;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.primaryBtn:hover {
+  background-color: #4ade80;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(34, 197, 94, 0.2);
+}

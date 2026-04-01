@@ -1,0 +1,157 @@
+/* BusinessGallery.module.css */
+
+.inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 50px 24px 20px 24px;
+}
+
+/* Header Section */
+.hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.heroTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 16px;
+  color: #052c15;
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  color: #666;
+  font-weight: 300;
+}
+
+/* Layout Section */
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 160px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+@media (min-width: 1024px) {
+  .heroTitle {
+    font-size: 3.5rem;
+  }
+  .row {
+    grid-template-columns: 1fr 1fr;
+  }
+  .rowReverse {
+    direction: rtl; /* 텍스트와 이미지 위치 반전 */
+  }
+  .rowReverse > * {
+    direction: ltr; /* 내부 텍스트 정렬은 다시 정상으로 */
+  }
+}
+
+/* Image Frame */
+.imageFrame {
+  position: relative;
+  aspect-ratio: 1 / 1.1;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.05);
+}
+
+.imageFrame img {
+  object-fit: cover;
+  transition: transform 1.5s ease;
+}
+
+.imageFrame:hover img {
+  transform: scale(1.08);
+}
+
+/* Content Area */
+.content {
+  padding-top: 20px;
+}
+
+.sectionTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: #16a34a;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.mainHeadline {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 48px;
+  word-break: keep-all;
+}
+
+/* Custom List Card */
+.cardList {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.card {
+  padding-left: 24px;
+  border-left: 2px solid #e5e7eb;
+  transition: all 0.4s ease;
+}
+
+.card:hover {
+  border-left-color: #16a34a;
+  padding-left: 32px;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #111;
+}
+
+.cardText {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* CTA Section */
+.cta {
+  background-color: #f9fafb;
+  padding: 100px 24px;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.ctaTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+
+.ctaButton {
+  padding: 16px 40px;
+  background-color: #16a34a;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.ctaButton:hover {
+  background-color: #15803d;
+}
