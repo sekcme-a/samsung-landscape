@@ -4,17 +4,18 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "firebasestorage.googleapis.com", // 👈 여기에 추출한 호스트 이름을 추가
+        hostname: "firebasestorage.googleapis.com",
         port: "",
-        pathname: "/**", // 👈 Supabase Public Bucket 경로 패턴 추가 (선택 사항이지만 권장)
+        pathname: "/**",
       },
       {
         protocol: "https",
-        hostname: "rrxfxwqbowjdwbkshwxg.supabase.co", // 👈 여기에 추출한 호스트 이름을 추가
+        hostname: "rrxfxwqbowjdwbkshwxg.supabase.co",
         port: "",
-        pathname: "/**", // 👈 Supabase Public Bucket 경로 패턴 추가 (선택 사항이지만 권장)
+        pathname: "/**",
       },
     ],
+    unoptimized: true, // 👈 여기에 이 줄을 꼭 추가해 주세요!
   },
 };
 
