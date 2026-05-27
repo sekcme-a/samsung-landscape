@@ -1,21 +1,21 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
+    unoptimized: true, // 👈 모든 이미지 최적화 비활성화
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "firebasestorage.googleapis.com",
+        hostname: "firebasestorage.googleapis.com", 
         port: "",
-        pathname: "/**",
+        pathname: "/**", 
       },
       {
         protocol: "https",
-        hostname: "rrxfxwqbowjdwbkshwxg.supabase.co",
+        hostname: "rrxfxwqbowjdwbkshwxg.supabase.co", 
         port: "",
-        pathname: "/**",
+        pathname: "/**", 
       },
     ],
-    unoptimized: true, // 👈 여기에 이 줄을 꼭 추가해 주세요!
   },
 };
 
