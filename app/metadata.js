@@ -18,11 +18,12 @@ const metadata = {
     title: "삼성조경",
     description:
       "삼성조경은 도봉구 조경 식재, 시설물 설치공사 등 창의적이고 지속 가능한 조경을 추구합니다.",
-    url: "https://xn--289a529abkak1w.kr", // 실제 도메인으로 변경 필요
+    url: "https://www.xn--289a529abkak1w.kr", 
     siteName: "삼성조경",
     images: [
       {
-        url: "/images/og-logo.png", // public 폴더 내 대표 이미지 경로
+        // 🔄 확장자를 .png로 변경했습니다.
+        url: "/images/KakaoTalk_20260714_152436646.png", 
         width: 1200,
         height: 630,
         alt: "삼성조경 로고",
@@ -36,10 +37,11 @@ const metadata = {
     title: "삼성조경",
     description:
       "삼성조경은 도봉구 조경 식재, 시설물 설치공사 등 창의적이고 지속 가능한 조경을 추구합니다.",
-    images: ["/images/og-logo.png"],
+    // 🔄 확장자를 .png로 변경했습니다.
+    images: ["/images/KakaoTalk_20260714_152436646.png"], 
   },
   alternates: {
-    canonical: "https://xn--289a529abkak1w.kr",
+    canonical: "https://www.xn--289a529abkak1w.kr", 
   },
 };
 
