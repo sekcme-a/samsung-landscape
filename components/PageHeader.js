@@ -14,7 +14,7 @@ const PageHeader = ({ title, text }) => {
     >
       {/* 🚩 이미지 최적화: alt 속성에 핵심 키워드 조합 유지 */}
       <Image
-        src="/images/main-banner1.webp"
+        src="/images/KakaoTalk_20260714_152436646.png"
         alt={`${title} 전문 삼성조경`}
         fill
         priority
