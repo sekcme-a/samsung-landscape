@@ -41,6 +41,10 @@ export default function RootLayout({ children }) {
           name="naver-site-verification"
           content="9cd198c0fd5d13e254568047d40523156709f263"
         />
+        <meta
+          name="naver-site-verification"
+          content="6c3de51a8e06d55db0c0f1eb4873499d4324ef95"
+        />
         <Script
           src={`//dapi.kakao.com/v2/maps/sdk.js?appkey=da751fb23c7f8cc96a72163af91ed742&libraries=services,clusterer&autoload=false`}
           strategy="beforeInteractive"
